@@ -1,7 +1,7 @@
 language: objective-c
 osx_image: xcode8
 env:
-  - DESTINATION="OS=11.0,name=iPhone 7" SCHEME="Vote" SDK=iphonesimulator11.1
+  - DESTINATION="OS=11.0,name=iPhone 7" SCHEME="Vote" SDK=iphonesimulator11.0
 
 before_install:
 - brew update 
