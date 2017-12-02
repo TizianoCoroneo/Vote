@@ -1,12 +1,10 @@
 language: objective-c
 osx_image: xcode8
 env:
-  - DESTINATION="OS=10.0,name=iPhone 6s" SCHEME="Vote" SDK=iphonesimulator10.0
+  - DESTINATION="OS=11.0,name=iPhone 7" SCHEME="Vote" SDK=iphonesimulator11.1
 
 before_install:
-- brew update
-- brew outdated carthage || brew upgrade carthage
-- carthage update --platform iOS
+- brew update 
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 
 script:
