@@ -1,10 +1,12 @@
 language: objective-c
-osx_image: xcode9.1
+osx_image: xcode8
+env:
+  - DESTINATION="OS=11.0,name=iPhone 7" SCHEME="Vote"
 
 before_install:
-- brew update 
+- brew update
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 
 script:
-- xcodebuild clean build -workspace Vote/Vote.xcworkspace -scheme "$SCHEME" -sdk "$SDK"
-- xcodebuild test -workspace Vote/Vote.xcworkspace -scheme "$SCHEME" | xcpretty -c
+- xcodebuild clean build -workspace Vote/Vote.xcworkspace -scheme "$SCHEME"
+- xcodebuild test -workspace Vote/Vote.xcworkspace -scheme "$SCHEME" -destination "$DESTINATION" | xcpretty -c

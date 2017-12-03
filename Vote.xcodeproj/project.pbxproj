@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		35660BCA1FD36EE600FBA959 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35660BC91FD36EE500FBA959 /* R.generated.swift */; };
+		35660BCD1FD3782600FBA959 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35660BCC1FD3782600FBA959 /* RealmManager.swift */; };
 		35B1AA251FD35C1900362712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B1AA241FD35C1900362712 /* AppDelegate.swift */; };
 		35B1AA271FD35C1900362712 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B1AA261FD35C1900362712 /* ViewController.swift */; };
 		35B1AA2A1FD35C1900362712 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B1AA281FD35C1900362712 /* Main.storyboard */; };
-		35B1AA2D1FD35C1900362712 /* Vote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35B1AA2B1FD35C1900362712 /* Vote.xcdatamodeld */; };
 		35B1AA2F1FD35C1900362712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35B1AA2E1FD35C1900362712 /* Assets.xcassets */; };
 		35B1AA321FD35C1900362712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B1AA301FD35C1900362712 /* LaunchScreen.storyboard */; };
 		35B1AA3D1FD35C1900362712 /* VoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B1AA3C1FD35C1900362712 /* VoteTests.swift */; };
@@ -40,11 +40,11 @@
 
 /* Begin PBXFileReference section */
 		35660BC91FD36EE500FBA959 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = Vote/System/R.generated.swift; sourceTree = SOURCE_ROOT; };
+		35660BCC1FD3782600FBA959 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		35B1AA211FD35C1900362712 /* Vote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35B1AA241FD35C1900362712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35B1AA261FD35C1900362712 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		35B1AA291FD35C1900362712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		35B1AA2C1FD35C1900362712 /* Vote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Vote.xcdatamodel; sourceTree = "<group>"; };
 		35B1AA2E1FD35C1900362712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35B1AA311FD35C1900362712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35B1AA331FD35C1900362712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -132,8 +132,8 @@
 				35B1AA261FD35C1900362712 /* ViewController.swift */,
 				35B1AA281FD35C1900362712 /* Main.storyboard */,
 				35B1AA2E1FD35C1900362712 /* Assets.xcassets */,
+				35660BCC1FD3782600FBA959 /* RealmManager.swift */,
 				35B1AA301FD35C1900362712 /* LaunchScreen.storyboard */,
-				35B1AA2B1FD35C1900362712 /* Vote.xcdatamodeld */,
 			);
 			path = Vote;
 			sourceTree = "<group>";
@@ -529,7 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35B1AA271FD35C1900362712 /* ViewController.swift in Sources */,
-				35B1AA2D1FD35C1900362712 /* Vote.xcdatamodeld in Sources */,
+				35660BCD1FD3782600FBA959 /* RealmManager.swift in Sources */,
 				35B1AA251FD35C1900362712 /* AppDelegate.swift in Sources */,
 				35660BCA1FD36EE600FBA959 /* R.generated.swift in Sources */,
 			);
@@ -837,19 +837,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		35B1AA2B1FD35C1900362712 /* Vote.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				35B1AA2C1FD35C1900362712 /* Vote.xcdatamodel */,
-			);
-			currentVersion = 35B1AA2C1FD35C1900362712 /* Vote.xcdatamodel */;
-			path = Vote.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 35B1AA191FD35C1900362712 /* Project object */;
 }
