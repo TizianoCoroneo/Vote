@@ -16,7 +16,7 @@ def app_pods
     pod 'KeychainAccess'                        # https://github.com/kishikawakatsumi/KeychainAccess
     pod 'NVActivityIndicatorView'               # https://github.com/ninjaprox/NVActivityIndicatorView
     pod 'Moya/RxSwift'                          # https://github.com/Moya/Moya
-    pod 'R.swift'                               # https://github.com/mac-cain13/R.swift
+#    pod 'R.swift'                               # https://github.com/mac-cain13/R.swift
     pod 'RealmSwift'                            # https://github.com/realm/realm-cocoa
     pod 'Result'                                # https://github.com/antitypical/Result
     pod 'RxAlamofire'                           # https://github.com/RxSwiftCommunity/RxAlamofire

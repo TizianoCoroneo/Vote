@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35660BCA1FD36EE600FBA959 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35660BC91FD36EE500FBA959 /* R.generated.swift */; };
 		35660BCD1FD3782600FBA959 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35660BCC1FD3782600FBA959 /* RealmManager.swift */; };
 		35660BCF1FD37A6100FBA959 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35660BCE1FD37A6100FBA959 /* UserModel.swift */; };
 		35B1AA251FD35C1900362712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B1AA241FD35C1900362712 /* AppDelegate.swift */; };
@@ -40,7 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		35660BC91FD36EE500FBA959 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = Vote/System/R.generated.swift; sourceTree = SOURCE_ROOT; };
 		35660BCC1FD3782600FBA959 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		35660BCE1FD37A6100FBA959 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		35B1AA211FD35C1900362712 /* Vote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vote.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,14 +93,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		35660BCB1FD376CF00FBA959 /* System */ = {
-			isa = PBXGroup;
-			children = (
-				35660BC91FD36EE500FBA959 /* R.generated.swift */,
-			);
-			path = System;
-			sourceTree = "<group>";
-		};
 		35660BD01FD37A6400FBA959 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				35B1AA331FD35C1900362712 /* Info.plist */,
-				35660BCB1FD376CF00FBA959 /* System */,
 				35B1AA241FD35C1900362712 /* AppDelegate.swift */,
 				35B1AA261FD35C1900362712 /* ViewController.swift */,
 				35B1AA281FD35C1900362712 /* Main.storyboard */,
@@ -203,7 +192,6 @@
 				35B1AA1F1FD35C1900362712 /* Resources */,
 				F945942A3803D7F440BCE178 /* [CP] Embed Pods Frameworks */,
 				A34F2A3283B5A184510A973C /* [CP] Copy Pods Resources */,
-				350ED7F51FD36BE700DF52E0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -383,19 +371,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VoteUITests/Pods-VoteUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		350ED7F51FD36BE700DF52E0 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
-		};
 		3BF4C6BA7FAB7AE0CB7185E6 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -497,7 +472,6 @@
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -517,7 +491,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -543,7 +516,6 @@
 				35660BCD1FD3782600FBA959 /* RealmManager.swift in Sources */,
 				35B1AA251FD35C1900362712 /* AppDelegate.swift in Sources */,
 				35660BCF1FD37A6100FBA959 /* UserModel.swift in Sources */,
-				35660BCA1FD36EE600FBA959 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
