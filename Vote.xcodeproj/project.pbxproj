@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		35660BCA1FD36EE600FBA959 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35660BC91FD36EE500FBA959 /* R.generated.swift */; };
 		35660BCD1FD3782600FBA959 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35660BCC1FD3782600FBA959 /* RealmManager.swift */; };
+		35660BCF1FD37A6100FBA959 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35660BCE1FD37A6100FBA959 /* UserModel.swift */; };
 		35B1AA251FD35C1900362712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B1AA241FD35C1900362712 /* AppDelegate.swift */; };
 		35B1AA271FD35C1900362712 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B1AA261FD35C1900362712 /* ViewController.swift */; };
 		35B1AA2A1FD35C1900362712 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B1AA281FD35C1900362712 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		35660BC91FD36EE500FBA959 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = Vote/System/R.generated.swift; sourceTree = SOURCE_ROOT; };
 		35660BCC1FD3782600FBA959 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		35660BCE1FD37A6100FBA959 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		35B1AA211FD35C1900362712 /* Vote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35B1AA241FD35C1900362712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35B1AA261FD35C1900362712 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,10 +98,18 @@
 		35660BCB1FD376CF00FBA959 /* System */ = {
 			isa = PBXGroup;
 			children = (
-				35B1AA331FD35C1900362712 /* Info.plist */,
 				35660BC91FD36EE500FBA959 /* R.generated.swift */,
 			);
 			path = System;
+			sourceTree = "<group>";
+		};
+		35660BD01FD37A6400FBA959 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				35660BCE1FD37A6100FBA959 /* UserModel.swift */,
+				35660BCC1FD3782600FBA959 /* RealmManager.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		35B1AA181FD35C1900362712 = {
@@ -127,12 +137,13 @@
 		35B1AA231FD35C1900362712 /* Vote */ = {
 			isa = PBXGroup;
 			children = (
+				35B1AA331FD35C1900362712 /* Info.plist */,
 				35660BCB1FD376CF00FBA959 /* System */,
 				35B1AA241FD35C1900362712 /* AppDelegate.swift */,
 				35B1AA261FD35C1900362712 /* ViewController.swift */,
 				35B1AA281FD35C1900362712 /* Main.storyboard */,
 				35B1AA2E1FD35C1900362712 /* Assets.xcassets */,
-				35660BCC1FD3782600FBA959 /* RealmManager.swift */,
+				35660BD01FD37A6400FBA959 /* Model */,
 				35B1AA301FD35C1900362712 /* LaunchScreen.storyboard */,
 			);
 			path = Vote;
@@ -531,6 +542,7 @@
 				35B1AA271FD35C1900362712 /* ViewController.swift in Sources */,
 				35660BCD1FD3782600FBA959 /* RealmManager.swift in Sources */,
 				35B1AA251FD35C1900362712 /* AppDelegate.swift in Sources */,
+				35660BCF1FD37A6100FBA959 /* UserModel.swift in Sources */,
 				35660BCA1FD36EE600FBA959 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

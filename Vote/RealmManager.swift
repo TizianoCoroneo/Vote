@@ -20,14 +20,6 @@ class RealmManager {
     fileprivate var config = Realm.Configuration()
 
     fileprivate init() {
-//        config.schemaVersion = 1
-//        config.migrationBlock = { migration, oldSchemaVersion in
-//             Perform migrations when needed
-//            if oldSchemaVersion == 1 {
-//                 ...
-//            }
-//        }
-
         do {
             defaultRealm = try Realm(configuration: config)
             debugPrint("Realm DB path: \(config.fileURL?.absoluteString ?? "nil")")

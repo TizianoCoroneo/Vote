@@ -8,5 +8,5 @@ before_install:
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 
 script:
-- xcodebuild clean build -workspace Vote/Vote.xcworkspace -scheme "$SCHEME"
-- xcodebuild test -workspace Vote/Vote.xcworkspace -scheme "$SCHEME" -destination "$DESTINATION" | xcpretty -c
+- xcodebuild clean build -workspace Vote.xcworkspace -scheme "$SCHEME"
+- xcodebuild test -workspace Vote.xcworkspace -scheme "$SCHEME" -destination "$DESTINATION" | xcpretty -c
