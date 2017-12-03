@@ -39,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		35660BC91FD36EE500FBA959 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		35660BC91FD36EE500FBA959 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = Vote/System/R.generated.swift; sourceTree = SOURCE_ROOT; };
 		35B1AA211FD35C1900362712 /* Vote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35B1AA241FD35C1900362712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35B1AA261FD35C1900362712 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35660BCB1FD376CF00FBA959 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				35B1AA331FD35C1900362712 /* Info.plist */,
+				35660BC91FD36EE500FBA959 /* R.generated.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
 		35B1AA181FD35C1900362712 = {
 			isa = PBXGroup;
 			children = (
@@ -118,13 +127,12 @@
 		35B1AA231FD35C1900362712 /* Vote */ = {
 			isa = PBXGroup;
 			children = (
-				35660BC91FD36EE500FBA959 /* R.generated.swift */,
+				35660BCB1FD376CF00FBA959 /* System */,
 				35B1AA241FD35C1900362712 /* AppDelegate.swift */,
 				35B1AA261FD35C1900362712 /* ViewController.swift */,
 				35B1AA281FD35C1900362712 /* Main.storyboard */,
 				35B1AA2E1FD35C1900362712 /* Assets.xcassets */,
 				35B1AA301FD35C1900362712 /* LaunchScreen.storyboard */,
-				35B1AA331FD35C1900362712 /* Info.plist */,
 				35B1AA2B1FD35C1900362712 /* Vote.xcdatamodeld */,
 			);
 			path = Vote;

@@ -1,7 +1,5 @@
 language: objective-c
-osx_image: xcode8
-env:
-  - DESTINATION="OS=11.0,name=iPhone 7" SCHEME="Vote" SDK=iphonesimulator11.0
+osx_image: xcode9.1
 
 before_install:
 - brew update 
@@ -9,4 +7,4 @@ before_install:
 
 script:
 - xcodebuild clean build -workspace Vote/Vote.xcworkspace -scheme "$SCHEME" -sdk "$SDK"
-- xcodebuild test -workspace Vote/Vote.xcworkspace -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" | xcpretty -c
+- xcodebuild test -workspace Vote/Vote.xcworkspace -scheme "$SCHEME" | xcpretty -c
