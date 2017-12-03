@@ -6,31 +6,55 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Question Table View Controller-->
         <scene sceneID="80N-Z8-N8F">
             <objects>
-                <tableViewController id="8VL-5e-sMB" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jl8-k9-nXH">
+                <tableViewController id="8VL-5e-sMB" customClass="QuestionTableViewController" customModule="Vote" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jl8-k9-nXH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="scrollIndicatorInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LiveTableViewCell" id="ILG-fH-b4x">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionTableViewCell" rowHeight="90" id="ILG-fH-b4x" customClass="QuestionTableViewCell" customModule="Vote" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ILG-fH-b4x" id="GJ0-UN-ZjA">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FRR-6B-RJ1" userLabel="Background">
+                                            <rect key="frame" x="8" y="8" width="359" height="82"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vH-HD-ym4">
+                                            <rect key="frame" x="16" y="11" width="343" height="68"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="FRR-6B-RJ1" firstAttribute="top" secondItem="GJ0-UN-ZjA" secondAttribute="top" constant="8" id="5k3-Sl-jQ8"/>
+                                        <constraint firstAttribute="bottom" secondItem="FRR-6B-RJ1" secondAttribute="bottom" id="76z-zi-axm"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="9vH-HD-ym4" secondAttribute="bottom" id="N7M-jB-icK"/>
+                                        <constraint firstAttribute="trailing" secondItem="FRR-6B-RJ1" secondAttribute="trailing" constant="8" id="VwR-Qc-fLt"/>
+                                        <constraint firstItem="9vH-HD-ym4" firstAttribute="top" secondItem="GJ0-UN-ZjA" secondAttribute="topMargin" id="b02-OJ-sMC"/>
+                                        <constraint firstItem="9vH-HD-ym4" firstAttribute="leading" secondItem="GJ0-UN-ZjA" secondAttribute="leadingMargin" id="uQu-Jj-vfj"/>
+                                        <constraint firstItem="FRR-6B-RJ1" firstAttribute="leading" secondItem="GJ0-UN-ZjA" secondAttribute="leading" constant="8" id="v0d-Sw-iCZ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="9vH-HD-ym4" secondAttribute="trailing" id="xg8-qj-PmY"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="background" destination="FRR-6B-RJ1" id="4Jw-uP-fUx"/>
+                                    <outlet property="questionLabel" destination="9vH-HD-ym4" id="Zng-Cz-cHs"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="8VL-5e-sMB" id="bWr-5W-ET8"/>
-                            <outlet property="delegate" destination="8VL-5e-sMB" id="uMg-PH-EoM"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="2D2-Li-m1E"/>
                 </tableViewController>
@@ -92,6 +116,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="MJG-hI-og8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="k0T-pR-Ro3">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

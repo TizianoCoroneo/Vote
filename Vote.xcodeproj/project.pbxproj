@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		35660BCD1FD3782600FBA959 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35660BCC1FD3782600FBA959 /* RealmManager.swift */; };
 		35660BCF1FD37A6100FBA959 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35660BCE1FD37A6100FBA959 /* UserModel.swift */; };
+		3587B8691FD44DE2004B7B54 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3587B8681FD44DE2004B7B54 /* QuestionTableViewController.swift */; };
+		3587B86B1FD44E39004B7B54 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3587B86A1FD44E39004B7B54 /* QuestionTableViewCell.swift */; };
+		3587B86E1FD44E58004B7B54 /* Color Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3587B86C1FD44E57004B7B54 /* Color Utilities.swift */; };
+		3587B86F1FD44E58004B7B54 /* StyleGlobals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3587B86D1FD44E57004B7B54 /* StyleGlobals.swift */; };
 		35B1AA251FD35C1900362712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B1AA241FD35C1900362712 /* AppDelegate.swift */; };
-		35B1AA271FD35C1900362712 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B1AA261FD35C1900362712 /* ViewController.swift */; };
 		35B1AA2A1FD35C1900362712 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B1AA281FD35C1900362712 /* Main.storyboard */; };
 		35B1AA2F1FD35C1900362712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35B1AA2E1FD35C1900362712 /* Assets.xcassets */; };
 		35B1AA321FD35C1900362712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B1AA301FD35C1900362712 /* LaunchScreen.storyboard */; };
@@ -41,9 +44,12 @@
 /* Begin PBXFileReference section */
 		35660BCC1FD3782600FBA959 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		35660BCE1FD37A6100FBA959 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		3587B8681FD44DE2004B7B54 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
+		3587B86A1FD44E39004B7B54 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		3587B86C1FD44E57004B7B54 /* Color Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color Utilities.swift"; sourceTree = "<group>"; };
+		3587B86D1FD44E57004B7B54 /* StyleGlobals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleGlobals.swift; sourceTree = "<group>"; };
 		35B1AA211FD35C1900362712 /* Vote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35B1AA241FD35C1900362712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		35B1AA261FD35C1900362712 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		35B1AA291FD35C1900362712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35B1AA2E1FD35C1900362712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35B1AA311FD35C1900362712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -127,13 +133,14 @@
 		35B1AA231FD35C1900362712 /* Vote */ = {
 			isa = PBXGroup;
 			children = (
-				35B1AA331FD35C1900362712 /* Info.plist */,
-				35B1AA241FD35C1900362712 /* AppDelegate.swift */,
-				35B1AA261FD35C1900362712 /* ViewController.swift */,
+				35C03EE21FD45578000B225A /* Utilities */,
 				35B1AA281FD35C1900362712 /* Main.storyboard */,
-				35B1AA2E1FD35C1900362712 /* Assets.xcassets */,
+				3587B86A1FD44E39004B7B54 /* QuestionTableViewCell.swift */,
+				3587B8681FD44DE2004B7B54 /* QuestionTableViewController.swift */,
+				35B1AA241FD35C1900362712 /* AppDelegate.swift */,
 				35660BD01FD37A6400FBA959 /* Model */,
-				35B1AA301FD35C1900362712 /* LaunchScreen.storyboard */,
+				35C03EE11FD4555F000B225A /* Resources */,
+				35B1AA331FD35C1900362712 /* Info.plist */,
 			);
 			path = Vote;
 			sourceTree = "<group>";
@@ -154,6 +161,24 @@
 				35B1AA491FD35C1900362712 /* Info.plist */,
 			);
 			path = VoteUITests;
+			sourceTree = "<group>";
+		};
+		35C03EE11FD4555F000B225A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				35B1AA2E1FD35C1900362712 /* Assets.xcassets */,
+				35B1AA301FD35C1900362712 /* LaunchScreen.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		35C03EE21FD45578000B225A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3587B86C1FD44E57004B7B54 /* Color Utilities.swift */,
+				3587B86D1FD44E57004B7B54 /* StyleGlobals.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		7873B4C81D866C227488A8DE /* Pods */ = {
@@ -512,8 +537,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35B1AA271FD35C1900362712 /* ViewController.swift in Sources */,
+				3587B86E1FD44E58004B7B54 /* Color Utilities.swift in Sources */,
+				3587B86F1FD44E58004B7B54 /* StyleGlobals.swift in Sources */,
 				35660BCD1FD3782600FBA959 /* RealmManager.swift in Sources */,
+				3587B8691FD44DE2004B7B54 /* QuestionTableViewController.swift in Sources */,
+				3587B86B1FD44E39004B7B54 /* QuestionTableViewCell.swift in Sources */,
 				35B1AA251FD35C1900362712 /* AppDelegate.swift in Sources */,
 				35660BCF1FD37A6100FBA959 /* UserModel.swift in Sources */,
 			);
