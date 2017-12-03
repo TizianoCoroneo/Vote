@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00B7F3F0F49AF3348E641431 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823DFBA31B6C238B472B7353 /* SystemConfiguration.framework */; };
+		087F71B830380E7BE8BFDE8C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D891857D8941D7B3AC8094 /* CoreVideo.framework */; };
+		1547896EE5EAD8BD75D4BB93 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C4A2B37D9C122487E5BDDD /* CoreTelephony.framework */; };
 		35660BCD1FD3782600FBA959 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35660BCC1FD3782600FBA959 /* RealmManager.swift */; };
 		35660BCF1FD37A6100FBA959 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35660BCE1FD37A6100FBA959 /* UserModel.swift */; };
 		3587B8691FD44DE2004B7B54 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3587B8681FD44DE2004B7B54 /* QuestionTableViewController.swift */; };
@@ -19,6 +22,12 @@
 		35B1AA321FD35C1900362712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B1AA301FD35C1900362712 /* LaunchScreen.storyboard */; };
 		35B1AA3D1FD35C1900362712 /* VoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B1AA3C1FD35C1900362712 /* VoteTests.swift */; };
 		35B1AA481FD35C1900362712 /* VoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B1AA471FD35C1900362712 /* VoteUITests.swift */; };
+		39A9B521F4F9EECBF7D99F7D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59470866B59BFADBDFD623B7 /* CoreText.framework */; };
+		45B003031E8E42D5AEA43CDF /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19585E54E69DF148FC9AD280 /* BuddyBuildSDK.framework */; };
+		8D5648983302A707D63A5933 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B5D68722D20E54D6283276 /* AVFoundation.framework */; };
+		920D0606CBF2FF41EEA77A29 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E41DEADB72F7BD3CDE1C1093 /* CoreMedia.framework */; };
+		9B27DCC95596C95DDA2582B9 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB2C9AE774F3AE5CCEF7754C /* AssetsLibrary.framework */; };
+		9D00077A379B1D8E52BD4989 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2F114C6B0E7AFC7C940C486 /* QuartzCore.framework */; };
 		AA5BFF8DE450191483D14740 /* Pods_VoteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988223D516FD91588B71DE37 /* Pods_VoteUITests.framework */; };
 		D222390192467F2DFAAC3970 /* Pods_Vote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425F9E6B21F908027AA57B1B /* Pods_Vote.framework */; };
 		F0DAB96C43332072EBA033C6 /* Pods_VoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E8C649D78241F99862F5D3E /* Pods_VoteTests.framework */; };
@@ -42,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DBBEB6EDE1BB9899AAE5309 /* Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		16B5D68722D20E54D6283276 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		19585E54E69DF148FC9AD280 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BuddyBuildSDK.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 		35660BCC1FD3782600FBA959 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		35660BCE1FD37A6100FBA959 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		3587B8681FD44DE2004B7B54 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
@@ -62,13 +74,20 @@
 		35B1AA491FD35C1900362712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		425F9E6B21F908027AA57B1B /* Pods_Vote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5688E9003EC6507C91A0EE97 /* Pods-VoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VoteTests/Pods-VoteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		59470866B59BFADBDFD623B7 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		7095F44A858C6B9F9E38FB32 /* Pods-Vote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vote.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vote/Pods-Vote.release.xcconfig"; sourceTree = "<group>"; };
+		823DFBA31B6C238B472B7353 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8659DCDB56034FA2B5A0AD5A /* Pods-VoteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VoteUITests/Pods-VoteUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		86D891857D8941D7B3AC8094 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		8E8C649D78241F99862F5D3E /* Pods_VoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96C4A2B37D9C122487E5BDDD /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		988223D516FD91588B71DE37 /* Pods_VoteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB2C9AE774F3AE5CCEF7754C /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		C850CA7117647DB1751377EC /* Pods-VoteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoteUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VoteUITests/Pods-VoteUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C9B8D16AC884A501C5A7A918 /* Pods-VoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VoteTests/Pods-VoteTests.release.xcconfig"; sourceTree = "<group>"; };
 		CC7CD8E96BA46FF1D665304D /* Pods-Vote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vote/Pods-Vote.debug.xcconfig"; sourceTree = "<group>"; };
+		E41DEADB72F7BD3CDE1C1093 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		F2F114C6B0E7AFC7C940C486 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +96,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D222390192467F2DFAAC3970 /* Pods_Vote.framework in Frameworks */,
+				45B003031E8E42D5AEA43CDF /* BuddyBuildSDK.framework in Frameworks */,
+				9B27DCC95596C95DDA2582B9 /* AssetsLibrary.framework in Frameworks */,
+				39A9B521F4F9EECBF7D99F7D /* CoreText.framework in Frameworks */,
+				1547896EE5EAD8BD75D4BB93 /* CoreTelephony.framework in Frameworks */,
+				00B7F3F0F49AF3348E641431 /* SystemConfiguration.framework in Frameworks */,
+				9D00077A379B1D8E52BD4989 /* QuartzCore.framework in Frameworks */,
+				8D5648983302A707D63A5933 /* AVFoundation.framework in Frameworks */,
+				920D0606CBF2FF41EEA77A29 /* CoreMedia.framework in Frameworks */,
+				087F71B830380E7BE8BFDE8C /* CoreVideo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +145,7 @@
 				35B1AA221FD35C1900362712 /* Products */,
 				7873B4C81D866C227488A8DE /* Pods */,
 				DF852EE8BAB74211AE51F0A7 /* Frameworks */,
+				0DBBEB6EDE1BB9899AAE5309 /* Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -200,6 +229,15 @@
 				425F9E6B21F908027AA57B1B /* Pods_Vote.framework */,
 				8E8C649D78241F99862F5D3E /* Pods_VoteTests.framework */,
 				988223D516FD91588B71DE37 /* Pods_VoteUITests.framework */,
+				19585E54E69DF148FC9AD280 /* BuddyBuildSDK.framework */,
+				BB2C9AE774F3AE5CCEF7754C /* AssetsLibrary.framework */,
+				59470866B59BFADBDFD623B7 /* CoreText.framework */,
+				96C4A2B37D9C122487E5BDDD /* CoreTelephony.framework */,
+				823DFBA31B6C238B472B7353 /* SystemConfiguration.framework */,
+				F2F114C6B0E7AFC7C940C486 /* QuartzCore.framework */,
+				16B5D68722D20E54D6283276 /* AVFoundation.framework */,
+				E41DEADB72F7BD3CDE1C1093 /* CoreMedia.framework */,
+				86D891857D8941D7B3AC8094 /* CoreVideo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -712,11 +750,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 23YF8RW87L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Vote/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tizianocoroneo.Voter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -729,11 +772,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 23YF8RW87L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Vote/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tizianocoroneo.Voter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
