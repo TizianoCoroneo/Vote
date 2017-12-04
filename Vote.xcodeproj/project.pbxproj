@@ -13,7 +13,6 @@
 		35660BCD1FD3782600FBA959 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35660BCC1FD3782600FBA959 /* RealmManager.swift */; };
 		35660BCF1FD37A6100FBA959 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35660BCE1FD37A6100FBA959 /* UserModel.swift */; };
 		3587B8691FD44DE2004B7B54 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3587B8681FD44DE2004B7B54 /* QuestionTableViewController.swift */; };
-		3587B86B1FD44E39004B7B54 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3587B86A1FD44E39004B7B54 /* QuestionTableViewCell.swift */; };
 		3587B86E1FD44E58004B7B54 /* Color Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3587B86C1FD44E57004B7B54 /* Color Utilities.swift */; };
 		3587B86F1FD44E58004B7B54 /* StyleGlobals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3587B86D1FD44E57004B7B54 /* StyleGlobals.swift */; };
 		35B1AA251FD35C1900362712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B1AA241FD35C1900362712 /* AppDelegate.swift */; };
@@ -22,6 +21,9 @@
 		35B1AA321FD35C1900362712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B1AA301FD35C1900362712 /* LaunchScreen.storyboard */; };
 		35B1AA3D1FD35C1900362712 /* VoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B1AA3C1FD35C1900362712 /* VoteTests.swift */; };
 		35B1AA481FD35C1900362712 /* VoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B1AA471FD35C1900362712 /* VoteUITests.swift */; };
+		35C03EED1FD4599D000B225A /* Themes.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35C03EEC1FD4599D000B225A /* Themes.xcassets */; };
+		35C03EEF1FD45E78000B225A /* VoteNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C03EEE1FD45E78000B225A /* VoteNavigationBar.swift */; };
+		35C03EF31FD493C7000B225A /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C03EF21FD493C7000B225A /* QuestionTableViewCell.swift */; };
 		39A9B521F4F9EECBF7D99F7D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59470866B59BFADBDFD623B7 /* CoreText.framework */; };
 		45B003031E8E42D5AEA43CDF /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19585E54E69DF148FC9AD280 /* BuddyBuildSDK.framework */; };
 		8D5648983302A707D63A5933 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B5D68722D20E54D6283276 /* AVFoundation.framework */; };
@@ -53,11 +55,10 @@
 /* Begin PBXFileReference section */
 		0DBBEB6EDE1BB9899AAE5309 /* Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		16B5D68722D20E54D6283276 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		19585E54E69DF148FC9AD280 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BuddyBuildSDK.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
+		19585E54E69DF148FC9AD280 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 		35660BCC1FD3782600FBA959 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		35660BCE1FD37A6100FBA959 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		3587B8681FD44DE2004B7B54 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
-		3587B86A1FD44E39004B7B54 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		3587B86C1FD44E57004B7B54 /* Color Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color Utilities.swift"; sourceTree = "<group>"; };
 		3587B86D1FD44E57004B7B54 /* StyleGlobals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleGlobals.swift; sourceTree = "<group>"; };
 		35B1AA211FD35C1900362712 /* Vote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vote.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +73,9 @@
 		35B1AA431FD35C1900362712 /* VoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35B1AA471FD35C1900362712 /* VoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteUITests.swift; sourceTree = "<group>"; };
 		35B1AA491FD35C1900362712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35C03EEC1FD4599D000B225A /* Themes.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Themes.xcassets; sourceTree = "<group>"; };
+		35C03EEE1FD45E78000B225A /* VoteNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteNavigationBar.swift; sourceTree = "<group>"; };
+		35C03EF21FD493C7000B225A /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		425F9E6B21F908027AA57B1B /* Pods_Vote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5688E9003EC6507C91A0EE97 /* Pods-VoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VoteTests/Pods-VoteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		59470866B59BFADBDFD623B7 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -127,15 +131,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		35660BD01FD37A6400FBA959 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				35660BCE1FD37A6100FBA959 /* UserModel.swift */,
-				35660BCC1FD3782600FBA959 /* RealmManager.swift */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
 		35B1AA181FD35C1900362712 = {
 			isa = PBXGroup;
 			children = (
@@ -162,13 +157,13 @@
 		35B1AA231FD35C1900362712 /* Vote */ = {
 			isa = PBXGroup;
 			children = (
+				35C03EEA1FD458B9000B225A /* Scenes */,
+				35C03EE61FD45877000B225A /* Views */,
+				35C03EE31FD4584A000B225A /* Model */,
+				35C03EE51FD45862000B225A /* Resources */,
 				35C03EE21FD45578000B225A /* Utilities */,
 				35B1AA281FD35C1900362712 /* Main.storyboard */,
-				3587B86A1FD44E39004B7B54 /* QuestionTableViewCell.swift */,
-				3587B8681FD44DE2004B7B54 /* QuestionTableViewController.swift */,
 				35B1AA241FD35C1900362712 /* AppDelegate.swift */,
-				35660BD01FD37A6400FBA959 /* Model */,
-				35C03EE11FD4555F000B225A /* Resources */,
 				35B1AA331FD35C1900362712 /* Info.plist */,
 			);
 			path = Vote;
@@ -192,15 +187,6 @@
 			path = VoteUITests;
 			sourceTree = "<group>";
 		};
-		35C03EE11FD4555F000B225A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				35B1AA2E1FD35C1900362712 /* Assets.xcassets */,
-				35B1AA301FD35C1900362712 /* LaunchScreen.storyboard */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		35C03EE21FD45578000B225A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +194,58 @@
 				3587B86D1FD44E57004B7B54 /* StyleGlobals.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		35C03EE31FD4584A000B225A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				35660BCE1FD37A6100FBA959 /* UserModel.swift */,
+				35660BCC1FD3782600FBA959 /* RealmManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		35C03EE51FD45862000B225A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				35C03EEC1FD4599D000B225A /* Themes.xcassets */,
+				35B1AA2E1FD35C1900362712 /* Assets.xcassets */,
+				35B1AA301FD35C1900362712 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		35C03EE61FD45877000B225A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				35C03EE81FD4588F000B225A /* Cells */,
+				35C03EEE1FD45E78000B225A /* VoteNavigationBar.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		35C03EE81FD4588F000B225A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		35C03EEA1FD458B9000B225A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				35C03EEB1FD458BF000B225A /* Questions */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		35C03EEB1FD458BF000B225A /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				3587B8681FD44DE2004B7B54 /* QuestionTableViewController.swift */,
+				35C03EF21FD493C7000B225A /* QuestionTableViewCell.swift */,
+			);
+			path = Questions;
 			sourceTree = "<group>";
 		};
 		7873B4C81D866C227488A8DE /* Pods */ = {
@@ -359,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35B1AA321FD35C1900362712 /* LaunchScreen.storyboard in Resources */,
+				35C03EED1FD4599D000B225A /* Themes.xcassets in Resources */,
 				35B1AA2F1FD35C1900362712 /* Assets.xcassets in Resources */,
 				35B1AA2A1FD35C1900362712 /* Main.storyboard in Resources */,
 			);
@@ -531,6 +570,7 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AsyncSwift/Async.framework",
 				"${BUILT_PRODUCTS_DIR}/Device/Device.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/DynamicColor/DynamicColor.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
@@ -540,6 +580,7 @@
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
 				"${BUILT_PRODUCTS_DIR}/XLSwiftKit/XLSwiftKit.framework",
@@ -550,6 +591,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Async.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Device.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicColor.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
@@ -559,6 +601,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLSwiftKit.framework",
@@ -579,7 +622,8 @@
 				3587B86F1FD44E58004B7B54 /* StyleGlobals.swift in Sources */,
 				35660BCD1FD3782600FBA959 /* RealmManager.swift in Sources */,
 				3587B8691FD44DE2004B7B54 /* QuestionTableViewController.swift in Sources */,
-				3587B86B1FD44E39004B7B54 /* QuestionTableViewCell.swift in Sources */,
+				35C03EF31FD493C7000B225A /* QuestionTableViewCell.swift in Sources */,
+				35C03EEF1FD45E78000B225A /* VoteNavigationBar.swift in Sources */,
 				35B1AA251FD35C1900362712 /* AppDelegate.swift in Sources */,
 				35660BCF1FD37A6100FBA959 /* UserModel.swift in Sources */,
 			);

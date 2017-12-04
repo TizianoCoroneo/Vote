@@ -13,8 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var setupColorStyle: (() -> ())? = AppDelegate.setupSystemAppearance
+    
+    static let style = StyleGuide()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
         BuddyBuildSDK.setup()
+        setupColorStyle?()
         
         // Override point for customization after application launch.
         return true
@@ -43,4 +49,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
     }
 }
-

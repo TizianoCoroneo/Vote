@@ -21,6 +21,7 @@ def app_pods
     pod 'Result'                                # https://github.com/antitypical/Result
     pod 'RxAlamofire'                           # https://github.com/RxSwiftCommunity/RxAlamofire
     pod 'RxCocoa'                               # https://github.com/ReactiveX/RxSwift
+    pod 'RxDataSources'                         # https://github.com/RxSwiftCommunity/RxDataSources
     pod 'RxSwift'                               # https://github.com/ReactiveX/RxSwift
     pod 'SwiftDate'                             # https://github.com/malcommac/SwiftDate
  #   pod 'WebLinking', :git => 'https://github.com/kylef/WebLinking.swift', :branch => 'master'
