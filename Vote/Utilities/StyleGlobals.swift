@@ -10,6 +10,8 @@ import UIKit
 
 struct StyleGuide {
     
+    let cornerRadius: CGFloat = 10
+    
     let statusBarColor: UIStatusBarStyle = .default
     
     let navBarBackgroungColor: UIColor = UIColor.voteLightGrey
@@ -18,7 +20,8 @@ struct StyleGuide {
     
     let navBarStyle = VoteNavigationBar.Style()
     
-    let textTableViewCellStyle = QuestionTableViewCell.Style()
+    var questionStyle: QuestionView.Style = QuestionView.Style.questionStyle
+    let answerStyle: QuestionView.Style = QuestionView.Style.answerStyle
 }
 
 extension AppDelegate {
@@ -28,20 +31,34 @@ extension AppDelegate {
     }
 }
 
-extension QuestionTableViewCell {
+extension QuestionView {
     struct Style {
-        let cornerRadius: CGFloat = 10
- 
-        let questionBackgroundColor: UIColor = UIColor.voteLightGrey
-        let questionBorderWidth: CGFloat = 0
-        let questionBorderColor: UIColor = UIColor.clear
-        let questionTextColor: UIColor = UIColor.voteDarkGrey
-        let questionSymbolColor: UIColor = UIColor.voteDarkGrey
+        var cornerRadius: CGFloat { return AppDelegate.style.cornerRadius }
         
-        let answerBackgroundColor: UIColor = UIColor.voteDarkGrey
-        let answerBorderWidth: CGFloat = 0
-        let answerBorderColor: UIColor = UIColor.clear
-        let answerTextColor: UIColor = UIColor.voteLightGrey
-        let answerSymbolColor: UIColor = UIColor.voteLightGrey
+        let backgroundColor: UIColor
+        let borderWidth: CGFloat
+        let borderColor: UIColor
+        let textColor: UIColor
+        let symbolColor: UIColor
+        
+        static var questionStyle: Style {
+            return Style.init(
+                backgroundColor: UIColor.voteLightGrey,
+                borderWidth: 0,
+                borderColor: UIColor.clear,
+                textColor: UIColor.voteDarkGrey,
+                symbolColor: UIColor.voteDarkGrey
+            )
+        }
+        
+        static var answerStyle: Style {
+            return Style.init(
+                backgroundColor: UIColor.voteDarkGrey,
+                borderWidth: 0,
+                borderColor: UIColor.clear,
+                textColor: UIColor.voteLightGrey,
+                symbolColor: UIColor.voteLightGrey
+            )
+        }
     }
 }

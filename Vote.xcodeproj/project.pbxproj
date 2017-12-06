@@ -24,6 +24,15 @@
 		35C03EED1FD4599D000B225A /* Themes.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35C03EEC1FD4599D000B225A /* Themes.xcassets */; };
 		35C03EEF1FD45E78000B225A /* VoteNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C03EEE1FD45E78000B225A /* VoteNavigationBar.swift */; };
 		35C03EF31FD493C7000B225A /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C03EF21FD493C7000B225A /* QuestionTableViewCell.swift */; };
+		35E710421FD74E8D006CE315 /* PrimarySplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E710411FD74E8D006CE315 /* PrimarySplitViewController.swift */; };
+		35E710461FD751DC006CE315 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E710451FD751DC006CE315 /* QuestionView.swift */; };
+		35E710481FD75378006CE315 /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E710471FD75377006CE315 /* AnswerView.swift */; };
+		35E7104A1FD75B2C006CE315 /* QuestionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E710491FD75B2C006CE315 /* QuestionTableView.swift */; };
+		35E7104D1FD7617F006CE315 /* AnswerQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E7104C1FD7617F006CE315 /* AnswerQuestionViewController.swift */; };
+		35E710501FD761D8006CE315 /* QuestionOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E7104F1FD761D8006CE315 /* QuestionOptionsView.swift */; };
+		35ECC5C21FD619D3009F5977 /* QuestionTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ECC5C11FD619D3009F5977 /* QuestionTableViewModel.swift */; };
+		35ECC5C61FD61AB7009F5977 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ECC5C51FD61AB7009F5977 /* QuestionModel.swift */; };
+		35ECC5C81FD6218E009F5977 /* QuestionOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ECC5C71FD6218E009F5977 /* QuestionOptions.swift */; };
 		39A9B521F4F9EECBF7D99F7D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59470866B59BFADBDFD623B7 /* CoreText.framework */; };
 		45B003031E8E42D5AEA43CDF /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19585E54E69DF148FC9AD280 /* BuddyBuildSDK.framework */; };
 		8D5648983302A707D63A5933 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B5D68722D20E54D6283276 /* AVFoundation.framework */; };
@@ -76,6 +85,15 @@
 		35C03EEC1FD4599D000B225A /* Themes.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Themes.xcassets; sourceTree = "<group>"; };
 		35C03EEE1FD45E78000B225A /* VoteNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteNavigationBar.swift; sourceTree = "<group>"; };
 		35C03EF21FD493C7000B225A /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		35E710411FD74E8D006CE315 /* PrimarySplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimarySplitViewController.swift; sourceTree = "<group>"; };
+		35E710451FD751DC006CE315 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		35E710471FD75377006CE315 /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
+		35E710491FD75B2C006CE315 /* QuestionTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableView.swift; sourceTree = "<group>"; };
+		35E7104C1FD7617F006CE315 /* AnswerQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerQuestionViewController.swift; sourceTree = "<group>"; };
+		35E7104F1FD761D8006CE315 /* QuestionOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionOptionsView.swift; sourceTree = "<group>"; };
+		35ECC5C11FD619D3009F5977 /* QuestionTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewModel.swift; sourceTree = "<group>"; };
+		35ECC5C51FD61AB7009F5977 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		35ECC5C71FD6218E009F5977 /* QuestionOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionOptions.swift; sourceTree = "<group>"; };
 		425F9E6B21F908027AA57B1B /* Pods_Vote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5688E9003EC6507C91A0EE97 /* Pods-VoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VoteTests/Pods-VoteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		59470866B59BFADBDFD623B7 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -199,6 +217,7 @@
 		35C03EE31FD4584A000B225A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				35ECC5C41FD61AA9009F5977 /* Questions */,
 				35660BCE1FD37A6100FBA959 /* UserModel.swift */,
 				35660BCC1FD3782600FBA959 /* RealmManager.swift */,
 			);
@@ -218,8 +237,11 @@
 		35C03EE61FD45877000B225A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				35E7104E1FD761BB006CE315 /* Toolbar */,
+				35E710441FD751BB006CE315 /* Navigation */,
 				35C03EE81FD4588F000B225A /* Cells */,
-				35C03EEE1FD45E78000B225A /* VoteNavigationBar.swift */,
+				35E710471FD75377006CE315 /* AnswerView.swift */,
+				35E710451FD751DC006CE315 /* QuestionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -234,6 +256,7 @@
 		35C03EEA1FD458B9000B225A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				35E7104B1FD76160006CE315 /* Answer Question */,
 				35C03EEB1FD458BF000B225A /* Questions */,
 			);
 			path = Scenes;
@@ -242,8 +265,44 @@
 		35C03EEB1FD458BF000B225A /* Questions */ = {
 			isa = PBXGroup;
 			children = (
+				35E710491FD75B2C006CE315 /* QuestionTableView.swift */,
+				35ECC5C11FD619D3009F5977 /* QuestionTableViewModel.swift */,
 				3587B8681FD44DE2004B7B54 /* QuestionTableViewController.swift */,
 				35C03EF21FD493C7000B225A /* QuestionTableViewCell.swift */,
+			);
+			path = Questions;
+			sourceTree = "<group>";
+		};
+		35E710441FD751BB006CE315 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				35E710411FD74E8D006CE315 /* PrimarySplitViewController.swift */,
+				35C03EEE1FD45E78000B225A /* VoteNavigationBar.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		35E7104B1FD76160006CE315 /* Answer Question */ = {
+			isa = PBXGroup;
+			children = (
+				35E7104C1FD7617F006CE315 /* AnswerQuestionViewController.swift */,
+			);
+			path = "Answer Question";
+			sourceTree = "<group>";
+		};
+		35E7104E1FD761BB006CE315 /* Toolbar */ = {
+			isa = PBXGroup;
+			children = (
+				35E7104F1FD761D8006CE315 /* QuestionOptionsView.swift */,
+			);
+			path = Toolbar;
+			sourceTree = "<group>";
+		};
+		35ECC5C41FD61AA9009F5977 /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				35ECC5C51FD61AB7009F5977 /* QuestionModel.swift */,
+				35ECC5C71FD6218E009F5977 /* QuestionOptions.swift */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
@@ -618,14 +677,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35E710501FD761D8006CE315 /* QuestionOptionsView.swift in Sources */,
+				35E7104A1FD75B2C006CE315 /* QuestionTableView.swift in Sources */,
+				35E710421FD74E8D006CE315 /* PrimarySplitViewController.swift in Sources */,
+				35ECC5C81FD6218E009F5977 /* QuestionOptions.swift in Sources */,
 				3587B86E1FD44E58004B7B54 /* Color Utilities.swift in Sources */,
+				35E7104D1FD7617F006CE315 /* AnswerQuestionViewController.swift in Sources */,
 				3587B86F1FD44E58004B7B54 /* StyleGlobals.swift in Sources */,
 				35660BCD1FD3782600FBA959 /* RealmManager.swift in Sources */,
 				3587B8691FD44DE2004B7B54 /* QuestionTableViewController.swift in Sources */,
+				35E710481FD75378006CE315 /* AnswerView.swift in Sources */,
+				35E710461FD751DC006CE315 /* QuestionView.swift in Sources */,
+				35ECC5C21FD619D3009F5977 /* QuestionTableViewModel.swift in Sources */,
 				35C03EF31FD493C7000B225A /* QuestionTableViewCell.swift in Sources */,
 				35C03EEF1FD45E78000B225A /* VoteNavigationBar.swift in Sources */,
 				35B1AA251FD35C1900362712 /* AppDelegate.swift in Sources */,
 				35660BCF1FD37A6100FBA959 /* UserModel.swift in Sources */,
+				35ECC5C61FD61AB7009F5977 /* QuestionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

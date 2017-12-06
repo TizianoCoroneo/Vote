@@ -71,5 +71,4 @@ extension Object {
             objects.forEach() { realm.add($0, update: update) }
         }
     }
-    
 }

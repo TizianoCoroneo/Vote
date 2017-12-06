@@ -29,7 +29,7 @@ extension SectionOfCellVM {
 class QuestionTableViewController: UITableViewController {
     
     typealias CellVM = QuestionTableViewCell.ViewModel
-   
+
     var style: StyleGuide = AppDelegate.style
 
     private let viewModels = [SectionOfCellVM.init(items: [
@@ -82,19 +82,18 @@ class QuestionTableViewController: UITableViewController {
         // Create the animated data source with RxDataSources and configure the table view cell.
         let animatedDataSource = RxTableViewSectionedAnimatedDataSource<SectionOfCellVM>(
             configureCell: {
-                [weak self]
                 dataSource, tableView, index, item in
             
                 guard
-                    let style = self?.style.textTableViewCellStyle,
                     let cell = tableView.dequeueReusableCell(
                         withIdentifier: QuestionTableViewCell.identifier)
                         as? QuestionTableViewCell
                     else { return UITableViewCell() }
                 
                 cell.configure(
-                    withViewModel: item,
-                    withStyle: style)
+                    withViewModel: item)
+                
+                cell.style = AppDelegate.style.questionTableViewCell
                 
                 return cell
         })

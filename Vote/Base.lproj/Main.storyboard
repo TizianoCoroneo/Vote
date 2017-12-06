@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,21 +15,21 @@
         <scene sceneID="80N-Z8-N8F">
             <objects>
                 <tableViewController id="8VL-5e-sMB" customClass="QuestionTableViewController" customModule="Vote" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jl8-k9-nXH">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jl8-k9-nXH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="scrollIndicatorInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionTableViewCell" rowHeight="250" id="vzO-fO-d6q" customClass="QuestionTableViewCell" customModule="Vote" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="250"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="QuestionTableViewCell" rowHeight="249" id="vzO-fO-d6q" customClass="QuestionTableViewCell" customModule="Vote" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="249"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vzO-fO-d6q" id="BLf-lg-GdG">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="249"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="250" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ifG-QC-mCP">
-                                            <rect key="frame" x="8" y="16" width="359" height="234"/>
+                                            <rect key="frame" x="8" y="16" width="359" height="233"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="T8w-Al-zr3" userLabel="Info view">
                                                     <rect key="frame" x="0.0" y="0.0" width="359" height="21"/>
@@ -50,7 +51,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="OBQ-sw-GdC"/>
                                                     </constraints>
                                                 </stackView>
-                                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="O3N-Pe-TtX" userLabel="Question View">
+                                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="O3N-Pe-TtX" userLabel="Question View" customClass="QuestionView" customModule="Vote" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="29" width="359" height="90"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="280" verticalHuggingPriority="251" text="Q" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WO7-P7-wTg">
@@ -63,7 +64,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why Trump has become president of the USA?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hyt-rB-87w">
-                                                            <rect key="frame" x="60" y="0.0" width="299" height="90"/>
+                                                            <rect key="frame" x="60" y="8" width="291" height="74"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                                             <color key="textColor" name="VoteDarkGrey"/>
                                                             <nil key="highlightedColor"/>
@@ -71,21 +72,25 @@
                                                     </subviews>
                                                     <color key="backgroundColor" name="VoteLightGrey"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="hyt-rB-87w" secondAttribute="bottom" id="4RO-3U-MVN"/>
+                                                        <constraint firstAttribute="bottom" secondItem="hyt-rB-87w" secondAttribute="bottom" constant="8" id="4RO-3U-MVN"/>
                                                         <constraint firstAttribute="bottom" secondItem="WO7-P7-wTg" secondAttribute="bottom" id="4S3-wx-de5"/>
-                                                        <constraint firstItem="hyt-rB-87w" firstAttribute="top" secondItem="O3N-Pe-TtX" secondAttribute="top" id="Nhr-uH-e4b"/>
-                                                        <constraint firstAttribute="trailing" secondItem="hyt-rB-87w" secondAttribute="trailing" id="Nnj-eR-Mna"/>
+                                                        <constraint firstItem="hyt-rB-87w" firstAttribute="top" secondItem="O3N-Pe-TtX" secondAttribute="top" constant="8" id="Nhr-uH-e4b"/>
+                                                        <constraint firstAttribute="trailing" secondItem="hyt-rB-87w" secondAttribute="trailing" constant="8" id="Nnj-eR-Mna"/>
                                                         <constraint firstAttribute="height" constant="90" id="d6G-P5-IKc"/>
                                                         <constraint firstItem="WO7-P7-wTg" firstAttribute="leading" secondItem="O3N-Pe-TtX" secondAttribute="leading" id="dBo-xR-Mg5"/>
                                                         <constraint firstItem="hyt-rB-87w" firstAttribute="leading" secondItem="WO7-P7-wTg" secondAttribute="trailing" id="gE1-Jg-ys4"/>
                                                         <constraint firstItem="WO7-P7-wTg" firstAttribute="top" secondItem="O3N-Pe-TtX" secondAttribute="top" id="h0o-j5-JBL"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <outlet property="qLabel" destination="WO7-P7-wTg" id="Qav-1u-VZL"/>
+                                                        <outlet property="questionLabel" destination="hyt-rB-87w" id="IJA-XQ-2LI"/>
+                                                    </connections>
                                                 </view>
-                                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="InL-Rb-Zk8">
-                                                    <rect key="frame" x="0.0" y="127" width="359" height="107"/>
+                                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="InL-Rb-Zk8" customClass="AnswerView" customModule="Vote" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="127" width="359" height="106"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="400" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6I-Dq-jU9">
-                                                            <rect key="frame" x="4" y="0.0" width="60" height="107"/>
+                                                            <rect key="frame" x="4" y="0.0" width="60" height="106"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="SPw-hu-R1I"/>
                                                             </constraints>
@@ -93,14 +98,14 @@
                                                             <color key="textColor" name="VoteLightGrey"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="300" verticalHuggingPriority="240" horizontalCompressionResistancePriority="500" text="Why Trump has become president of the USA?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21B-uN-3oK">
-                                                            <rect key="frame" x="68" y="0.0" width="221" height="107"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="300" verticalHuggingPriority="240" horizontalCompressionResistancePriority="500" placeholderIntrinsicWidth="221" placeholderIntrinsicHeight="74" text="Why Trump has become president of the USA?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21B-uN-3oK">
+                                                            <rect key="frame" x="68" y="8" width="221" height="90"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                                             <color key="textColor" name="VoteLightGrey"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="350" verticalHuggingPriority="251" horizontalCompressionResistancePriority="400" text="34" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GO1-cs-5eZ">
-                                                            <rect key="frame" x="293" y="0.0" width="62" height="107"/>
+                                                            <rect key="frame" x="293" y="0.0" width="62" height="106"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="hwg-dS-bl1"/>
                                                             </constraints>
@@ -111,18 +116,23 @@
                                                     </subviews>
                                                     <color key="backgroundColor" name="VoteDarkGrey"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="90" id="0JM-EJ-JuD"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="0JM-EJ-JuD"/>
                                                         <constraint firstItem="t6I-Dq-jU9" firstAttribute="top" secondItem="InL-Rb-Zk8" secondAttribute="top" id="BYa-d4-9Ua"/>
                                                         <constraint firstItem="21B-uN-3oK" firstAttribute="leading" secondItem="t6I-Dq-jU9" secondAttribute="trailing" constant="4" id="BfP-oe-iJY"/>
                                                         <constraint firstAttribute="bottom" secondItem="t6I-Dq-jU9" secondAttribute="bottom" id="JNp-d0-E6J"/>
                                                         <constraint firstItem="GO1-cs-5eZ" firstAttribute="top" secondItem="InL-Rb-Zk8" secondAttribute="top" id="PFN-Xt-uCt"/>
-                                                        <constraint firstItem="21B-uN-3oK" firstAttribute="top" secondItem="InL-Rb-Zk8" secondAttribute="top" id="k8h-vD-cB4"/>
+                                                        <constraint firstItem="21B-uN-3oK" firstAttribute="top" secondItem="InL-Rb-Zk8" secondAttribute="top" constant="8" id="k8h-vD-cB4"/>
                                                         <constraint firstAttribute="trailing" secondItem="GO1-cs-5eZ" secondAttribute="trailing" constant="4" id="mhc-C2-dS2"/>
-                                                        <constraint firstAttribute="bottom" secondItem="21B-uN-3oK" secondAttribute="bottom" id="pMh-2L-ldJ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="21B-uN-3oK" secondAttribute="bottom" constant="8" id="pMh-2L-ldJ"/>
                                                         <constraint firstItem="t6I-Dq-jU9" firstAttribute="leading" secondItem="InL-Rb-Zk8" secondAttribute="leading" constant="4" id="q6v-ki-Niq"/>
                                                         <constraint firstItem="GO1-cs-5eZ" firstAttribute="leading" secondItem="21B-uN-3oK" secondAttribute="trailing" constant="4" id="wlY-Dg-pzd"/>
                                                         <constraint firstAttribute="bottom" secondItem="GO1-cs-5eZ" secondAttribute="bottom" id="wuL-5H-9uc"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <outlet property="qLabel" destination="t6I-Dq-jU9" id="nQm-fn-jEy"/>
+                                                        <outlet property="questionLabel" destination="21B-uN-3oK" id="CoJ-zx-mCW"/>
+                                                        <outlet property="voteLabel" destination="GO1-cs-5eZ" id="d4d-0d-mbk"/>
+                                                    </connections>
                                                 </view>
                                             </subviews>
                                         </stackView>
@@ -135,15 +145,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="aLabel" destination="t6I-Dq-jU9" id="hYb-6M-LeR"/>
-                                    <outlet property="answerBackground" destination="InL-Rb-Zk8" id="HkT-VJ-7ZC"/>
-                                    <outlet property="answerLabel" destination="21B-uN-3oK" id="XPw-t4-Xaq"/>
-                                    <outlet property="answerVotesLabel" destination="GO1-cs-5eZ" id="Yku-bu-sVQ"/>
+                                    <outlet property="answer" destination="InL-Rb-Zk8" id="sHL-cb-56i"/>
                                     <outlet property="hourLabel" destination="Cu1-yz-RC2" id="qle-HT-CrR"/>
-                                    <outlet property="qLabel" destination="WO7-P7-wTg" id="eD7-3r-5KK"/>
-                                    <outlet property="questionBackground" destination="O3N-Pe-TtX" id="Ykb-Uq-8HG"/>
-                                    <outlet property="questionLabel" destination="hyt-rB-87w" id="YT1-Mi-FY6"/>
+                                    <outlet property="question" destination="O3N-Pe-TtX" id="Ebm-Ca-EGN"/>
                                     <outlet property="votesLabel" destination="Bnw-PS-qrm" id="QGu-Cx-d4t"/>
+                                    <segue destination="fV2-fs-lDT" kind="show" action="showDetailViewController:sender:" id="uaa-gD-KRL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -152,7 +158,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y63-8X-Vjf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1672.8" y="121.88905547226388"/>
+            <point key="canvasLocation" x="2509.5999999999999" y="-287.40629685157421"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="Haa-rL-e4Y">
@@ -183,24 +189,173 @@
             </objects>
             <point key="canvasLocation" x="1673" y="881"/>
         </scene>
-        <!--Live-->
-        <scene sceneID="FrX-ra-9mP">
+        <!--Answer Question View Controller-->
+        <scene sceneID="OeF-Gk-hY8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I6b-qH-9hm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Live" id="yR1-UV-LGo"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0iR-mc-Rdn" customClass="VoteNavigationBar" customModule="Vote" customModuleProvider="target">
+                <viewController id="fV2-fs-lDT" customClass="AnswerQuestionViewController" customModule="Vote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Oc-Gs-r55">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="090-YF-AxY" userLabel="Question View" customClass="QuestionView" customModule="Vote" customModuleProvider="target">
+                                <rect key="frame" x="8" y="132" width="359" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="280" verticalHuggingPriority="251" text="Q" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRD-9a-Z56">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="NF5-LS-wvh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="45"/>
+                                        <color key="textColor" name="VoteDarkGrey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why Trump has become president of the USA?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="egi-KU-QYE">
+                                        <rect key="frame" x="60" y="8" width="291" height="84"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                        <color key="textColor" name="VoteDarkGrey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="VoteLightGrey"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="AJq-Fi-8pi"/>
+                                    <constraint firstItem="egi-KU-QYE" firstAttribute="top" secondItem="090-YF-AxY" secondAttribute="top" constant="8" id="ARy-Yk-Z9Y"/>
+                                    <constraint firstAttribute="bottom" secondItem="uRD-9a-Z56" secondAttribute="bottom" id="Rei-pX-dqT"/>
+                                    <constraint firstItem="uRD-9a-Z56" firstAttribute="top" secondItem="090-YF-AxY" secondAttribute="top" id="aTb-8k-qO6"/>
+                                    <constraint firstItem="uRD-9a-Z56" firstAttribute="leading" secondItem="090-YF-AxY" secondAttribute="leading" id="r6b-jb-ecx"/>
+                                    <constraint firstItem="egi-KU-QYE" firstAttribute="leading" secondItem="uRD-9a-Z56" secondAttribute="trailing" id="sRC-Cr-hiR"/>
+                                    <constraint firstAttribute="bottom" secondItem="egi-KU-QYE" secondAttribute="bottom" constant="8" id="tDV-ZI-tTL"/>
+                                    <constraint firstAttribute="trailing" secondItem="egi-KU-QYE" secondAttribute="trailing" constant="8" id="zYq-fa-gyp"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="qLabel" destination="uRD-9a-Z56" id="SV7-36-nES"/>
+                                    <outlet property="questionLabel" destination="egi-KU-QYE" id="yhe-rO-oLA"/>
+                                </connections>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKf-ad-se6">
+                                <rect key="frame" x="0.0" y="64" width="375" height="60"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="OSL-N1-Q7U" customClass="QuestionOptionsView" customModule="Vote" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="8" width="404" height="44"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icons/Closed answers" translatesAutoresizingMaskIntoConstraints="NO" id="fi5-P2-oxX">
+                                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="BOG-2E-2c4"/>
+                                                    <constraint firstAttribute="width" constant="44" id="Oz6-Le-V8Z"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icons/No partial results" translatesAutoresizingMaskIntoConstraints="NO" id="tcg-qL-Nzp">
+                                                <rect key="frame" x="60" y="0.0" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="44" id="8Y6-p2-y34"/>
+                                                    <constraint firstAttribute="height" constant="44" id="A3f-9N-fYy"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icons/No time limit" translatesAutoresizingMaskIntoConstraints="NO" id="hfI-1V-6wK">
+                                                <rect key="frame" x="120" y="0.0" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="Bof-vm-2om"/>
+                                                    <constraint firstAttribute="width" constant="44" id="dYL-aN-fYN"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icons/Private votation" translatesAutoresizingMaskIntoConstraints="NO" id="bXb-C7-ru3">
+                                                <rect key="frame" x="180" y="0.0" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="44" id="65J-23-Adg"/>
+                                                    <constraint firstAttribute="height" constant="44" id="pkT-Sj-S7f"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icons/Locked answers" translatesAutoresizingMaskIntoConstraints="NO" id="zV8-RY-Zyg">
+                                                <rect key="frame" x="240" y="0.0" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="QNb-zz-DfN"/>
+                                                    <constraint firstAttribute="width" constant="44" id="Zxj-dm-teY"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icons/Multiple answers" translatesAutoresizingMaskIntoConstraints="NO" id="5Yh-py-S8g">
+                                                <rect key="frame" x="300" y="0.0" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="fWu-l2-cce"/>
+                                                    <constraint firstAttribute="width" constant="44" id="xi2-NK-vy8"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icons/Secret answer" translatesAutoresizingMaskIntoConstraints="NO" id="PW5-IT-zl7">
+                                                <rect key="frame" x="360" y="0.0" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="44" id="OMi-zl-92H"/>
+                                                    <constraint firstAttribute="height" constant="44" id="phk-Ch-qiY"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <connections>
+                                            <outletCollection property="optionsViews" destination="fi5-P2-oxX" collectionClass="NSMutableArray" id="dWB-cO-8J2"/>
+                                            <outletCollection property="optionsViews" destination="tcg-qL-Nzp" collectionClass="NSMutableArray" id="OWx-tS-krI"/>
+                                            <outletCollection property="optionsViews" destination="hfI-1V-6wK" collectionClass="NSMutableArray" id="Bws-v6-lj2"/>
+                                            <outletCollection property="optionsViews" destination="bXb-C7-ru3" collectionClass="NSMutableArray" id="nKr-Qb-4kr"/>
+                                            <outletCollection property="optionsViews" destination="zV8-RY-Zyg" collectionClass="NSMutableArray" id="lkw-0S-tym"/>
+                                            <outletCollection property="optionsViews" destination="5Yh-py-S8g" collectionClass="NSMutableArray" id="D4M-yI-0uI"/>
+                                            <outletCollection property="optionsViews" destination="PW5-IT-zl7" collectionClass="NSMutableArray" id="ymY-ED-knu"/>
+                                        </connections>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="OSL-N1-Q7U" firstAttribute="leading" secondItem="MKf-ad-se6" secondAttribute="leading" constant="8" id="GsI-Kt-119"/>
+                                    <constraint firstAttribute="trailing" secondItem="OSL-N1-Q7U" secondAttribute="trailing" constant="8" id="HXP-J9-Q2O"/>
+                                    <constraint firstAttribute="height" constant="60" id="JBw-FV-obc"/>
+                                    <constraint firstAttribute="bottom" secondItem="OSL-N1-Q7U" secondAttribute="bottom" constant="8" id="oer-m7-xVo"/>
+                                    <constraint firstItem="OSL-N1-Q7U" firstAttribute="top" secondItem="MKf-ad-se6" secondAttribute="top" constant="8" id="vNc-ao-ebz"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MKf-ad-se6" firstAttribute="leading" secondItem="urO-cl-8GS" secondAttribute="leading" id="Cjw-lm-ANM"/>
+                            <constraint firstItem="MKf-ad-se6" firstAttribute="top" secondItem="urO-cl-8GS" secondAttribute="top" id="NzW-1x-4AL"/>
+                            <constraint firstItem="090-YF-AxY" firstAttribute="top" secondItem="MKf-ad-se6" secondAttribute="bottom" constant="8" id="TNE-6S-pth"/>
+                            <constraint firstItem="urO-cl-8GS" firstAttribute="trailing" secondItem="090-YF-AxY" secondAttribute="trailing" constant="8" id="cOo-mK-tqY"/>
+                            <constraint firstItem="090-YF-AxY" firstAttribute="leading" secondItem="urO-cl-8GS" secondAttribute="leading" constant="8" id="ciI-Ys-Gb0"/>
+                            <constraint firstItem="MKf-ad-se6" firstAttribute="trailing" secondItem="urO-cl-8GS" secondAttribute="trailing" id="hsQ-lF-shq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="urO-cl-8GS"/>
+                    </view>
+                    <connections>
+                        <outlet property="questionView" destination="090-YF-AxY" id="YJt-7s-0i4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bIC-MO-uPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2509.5999999999999" y="720.08995502248877"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8ye-ev-iWX">
+            <objects>
+                <navigationController id="PNf-bt-hx1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zDv-nK-G7A">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="8VL-5e-sMB" kind="relationship" relationship="rootViewController" id="iKD-GB-KkL"/>
+                        <segue destination="8VL-5e-sMB" kind="relationship" relationship="rootViewController" id="b3m-yp-rlO"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5yc-wJ-Mbt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fkf-VN-dTW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="814" y="122"/>
+            <point key="canvasLocation" x="1673" y="-287"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="xrh-a7-ft7">
+            <objects>
+                <splitViewController id="6yw-bz-241" customClass="PrimarySplitViewController" customModule="Vote" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="iqb-Ai-qOL"/>
+                    <connections>
+                        <segue destination="PNf-bt-hx1" kind="relationship" relationship="masterViewController" id="BkF-CI-CDd"/>
+                        <segue destination="fV2-fs-lDT" kind="relationship" relationship="detailViewController" id="n1j-pL-RTa"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hCE-M5-1fe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="814" y="-40"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="0tk-O8-Hjs">
@@ -213,9 +368,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="I6b-qH-9hm" kind="relationship" relationship="viewControllers" id="XKS-8l-aNd"/>
                         <segue destination="ikW-sO-ec3" kind="relationship" relationship="viewControllers" id="HWK-DF-gBQ"/>
                         <segue destination="bjJ-V6-2W8" kind="relationship" relationship="viewControllers" id="5M8-ta-67H"/>
+                        <segue destination="6yw-bz-241" kind="relationship" relationship="viewControllers" id="t3a-jy-Vuh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PdK-O4-qLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -292,8 +447,21 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Icons/Closed answers" width="44" height="44"/>
+        <image name="Icons/Locked answers" width="44" height="44"/>
+        <image name="Icons/Multiple answers" width="44" height="44"/>
+        <image name="Icons/No partial results" width="44" height="44"/>
+        <image name="Icons/No time limit" width="44" height="44"/>
+        <image name="Icons/Private votation" width="44" height="44"/>
+        <image name="Icons/Secret answer" width="44" height="44"/>
         <namedColor name="VoteDarkGrey">
             <color red="0.29019607843137257" green="0.29019607843137257" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="VoteDarkGrey">
+            <color red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="VoteLightGrey">
+            <color red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="VoteLightGrey">
             <color red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -302,4 +470,7 @@
             <color red="0.77300000189999996" green="0.77300000189999996" blue="0.77300000189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="uaa-gD-KRL"/>
+    </inferredMetricsTieBreakers>
 </document>
