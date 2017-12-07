@@ -236,66 +236,38 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="60"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="OSL-N1-Q7U" customClass="QuestionOptionsView" customModule="Vote" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="8" width="404" height="44"/>
+                                        <rect key="frame" x="8" y="8" width="306" height="30"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icons/Closed answers" translatesAutoresizingMaskIntoConstraints="NO" id="fi5-P2-oxX">
-                                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="BOG-2E-2c4"/>
-                                                    <constraint firstAttribute="width" constant="44" id="Oz6-Le-V8Z"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icons/No partial results" translatesAutoresizingMaskIntoConstraints="NO" id="tcg-qL-Nzp">
-                                                <rect key="frame" x="60" y="0.0" width="44" height="44"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="44" id="8Y6-p2-y34"/>
-                                                    <constraint firstAttribute="height" constant="44" id="A3f-9N-fYy"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icons/No time limit" translatesAutoresizingMaskIntoConstraints="NO" id="hfI-1V-6wK">
-                                                <rect key="frame" x="120" y="0.0" width="44" height="44"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="Bof-vm-2om"/>
-                                                    <constraint firstAttribute="width" constant="44" id="dYL-aN-fYN"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icons/Private votation" translatesAutoresizingMaskIntoConstraints="NO" id="bXb-C7-ru3">
-                                                <rect key="frame" x="180" y="0.0" width="44" height="44"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="44" id="65J-23-Adg"/>
-                                                    <constraint firstAttribute="height" constant="44" id="pkT-Sj-S7f"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icons/Locked answers" translatesAutoresizingMaskIntoConstraints="NO" id="zV8-RY-Zyg">
-                                                <rect key="frame" x="240" y="0.0" width="44" height="44"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="QNb-zz-DfN"/>
-                                                    <constraint firstAttribute="width" constant="44" id="Zxj-dm-teY"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icons/Multiple answers" translatesAutoresizingMaskIntoConstraints="NO" id="5Yh-py-S8g">
-                                                <rect key="frame" x="300" y="0.0" width="44" height="44"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="fWu-l2-cce"/>
-                                                    <constraint firstAttribute="width" constant="44" id="xi2-NK-vy8"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icons/Secret answer" translatesAutoresizingMaskIntoConstraints="NO" id="PW5-IT-zl7">
-                                                <rect key="frame" x="360" y="0.0" width="44" height="44"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="44" id="OMi-zl-92H"/>
-                                                    <constraint firstAttribute="height" constant="44" id="phk-Ch-qiY"/>
-                                                </constraints>
-                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijt-w6-gf8" customClass="QuestionOptionToggle" customModule="Vote" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tm4-x1-KvP" customClass="QuestionOptionToggle" customModule="Vote" customModuleProvider="target">
+                                                <rect key="frame" x="46" y="0.0" width="30" height="30"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgR-GK-2z2" customClass="QuestionOptionToggle" customModule="Vote" customModuleProvider="target">
+                                                <rect key="frame" x="92" y="0.0" width="30" height="30"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOA-1H-ax1" customClass="QuestionOptionToggle" customModule="Vote" customModuleProvider="target">
+                                                <rect key="frame" x="138" y="0.0" width="30" height="30"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04b-tR-iVD" customClass="QuestionOptionToggle" customModule="Vote" customModuleProvider="target">
+                                                <rect key="frame" x="184" y="0.0" width="30" height="30"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rN0-cL-rqQ" customClass="QuestionOptionToggle" customModule="Vote" customModuleProvider="target">
+                                                <rect key="frame" x="230" y="0.0" width="30" height="30"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIj-mU-Fxq" customClass="QuestionOptionToggle" customModule="Vote" customModuleProvider="target">
+                                                <rect key="frame" x="276" y="0.0" width="30" height="30"/>
+                                            </button>
                                         </subviews>
                                         <connections>
-                                            <outletCollection property="optionsViews" destination="fi5-P2-oxX" collectionClass="NSMutableArray" id="dWB-cO-8J2"/>
-                                            <outletCollection property="optionsViews" destination="tcg-qL-Nzp" collectionClass="NSMutableArray" id="OWx-tS-krI"/>
-                                            <outletCollection property="optionsViews" destination="hfI-1V-6wK" collectionClass="NSMutableArray" id="Bws-v6-lj2"/>
-                                            <outletCollection property="optionsViews" destination="bXb-C7-ru3" collectionClass="NSMutableArray" id="nKr-Qb-4kr"/>
-                                            <outletCollection property="optionsViews" destination="zV8-RY-Zyg" collectionClass="NSMutableArray" id="lkw-0S-tym"/>
-                                            <outletCollection property="optionsViews" destination="5Yh-py-S8g" collectionClass="NSMutableArray" id="D4M-yI-0uI"/>
-                                            <outletCollection property="optionsViews" destination="PW5-IT-zl7" collectionClass="NSMutableArray" id="ymY-ED-knu"/>
+                                            <outletCollection property="optionsViews" destination="Ijt-w6-gf8" collectionClass="NSMutableArray" id="bq7-1l-8lm"/>
+                                            <outletCollection property="optionsViews" destination="Tm4-x1-KvP" collectionClass="NSMutableArray" id="UcE-TA-e1G"/>
+                                            <outletCollection property="optionsViews" destination="BgR-GK-2z2" collectionClass="NSMutableArray" id="stA-Bm-7h1"/>
+                                            <outletCollection property="optionsViews" destination="LOA-1H-ax1" collectionClass="NSMutableArray" id="fJE-Dj-QMp"/>
+                                            <outletCollection property="optionsViews" destination="04b-tR-iVD" collectionClass="NSMutableArray" id="QPP-cJ-t7k"/>
+                                            <outletCollection property="optionsViews" destination="rN0-cL-rqQ" collectionClass="NSMutableArray" id="77N-jw-qAG"/>
+                                            <outletCollection property="optionsViews" destination="RIj-mU-Fxq" collectionClass="NSMutableArray" id="Qw8-pP-9Ns"/>
                                         </connections>
                                     </stackView>
                                 </subviews>
@@ -320,6 +292,7 @@
                         <viewLayoutGuide key="safeArea" id="urO-cl-8GS"/>
                     </view>
                     <connections>
+                        <outlet property="optionsView" destination="OSL-N1-Q7U" id="LS0-FT-gnu"/>
                         <outlet property="questionView" destination="090-YF-AxY" id="YJt-7s-0i4"/>
                     </connections>
                 </viewController>
@@ -447,13 +420,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icons/Closed answers" width="44" height="44"/>
-        <image name="Icons/Locked answers" width="44" height="44"/>
-        <image name="Icons/Multiple answers" width="44" height="44"/>
-        <image name="Icons/No partial results" width="44" height="44"/>
-        <image name="Icons/No time limit" width="44" height="44"/>
-        <image name="Icons/Private votation" width="44" height="44"/>
-        <image name="Icons/Secret answer" width="44" height="44"/>
         <namedColor name="VoteDarkGrey">
             <color red="0.29019607843137257" green="0.29019607843137257" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
