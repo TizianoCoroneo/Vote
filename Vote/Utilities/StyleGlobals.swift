@@ -9,19 +9,13 @@
 import UIKit
 
 struct StyleGuide {
-    
-    let cornerRadius: CGFloat = 10
-    
+
     let statusBarColor: UIStatusBarStyle = .default
     
-    let navBarBackgroungColor: UIColor = UIColor.voteLightGrey
-    let navBarItemsTintColor: UIColor = UIColor.voteDarkGrey
-    let navBarTitleColor: UIColor = UIColor.voteDarkGrey
+    let navBarStyle: VoteNavigationBar.Style = navigationBar
     
-    let navBarStyle = VoteNavigationBar.Style()
-    
-    var questionStyle: QuestionView.Style = QuestionView.Style.questionStyle
-    let answerStyle: QuestionView.Style = QuestionView.Style.answerStyle
+    var questionView: QuestionView.Style = questionStyle
+    var answerView: QuestionView.Style = answerStyle
 }
 
 extension AppDelegate {
@@ -31,34 +25,33 @@ extension AppDelegate {
     }
 }
 
-extension QuestionView {
-    struct Style {
-        var cornerRadius: CGFloat { return AppDelegate.style.cornerRadius }
-        
-        let backgroundColor: UIColor
-        let borderWidth: CGFloat
-        let borderColor: UIColor
-        let textColor: UIColor
-        let symbolColor: UIColor
-        
-        static var questionStyle: Style {
-            return Style.init(
-                backgroundColor: UIColor.voteLightGrey,
-                borderWidth: 0,
-                borderColor: UIColor.clear,
-                textColor: UIColor.voteDarkGrey,
-                symbolColor: UIColor.voteDarkGrey
-            )
-        }
-        
-        static var answerStyle: Style {
-            return Style.init(
-                backgroundColor: UIColor.voteDarkGrey,
-                borderWidth: 0,
-                borderColor: UIColor.clear,
-                textColor: UIColor.voteLightGrey,
-                symbolColor: UIColor.voteLightGrey
-            )
-        }
-    }
+fileprivate var questionStyle: QuestionView.Style {
+    return QuestionView.Style.init(
+        cornerRadius: 10,
+        backgroundColor: UIColor.voteLightGrey,
+        borderWidth: 0,
+        borderColor: UIColor.clear,
+        textColor: UIColor.voteDarkGrey,
+        symbolColor: UIColor.voteDarkGrey
+    )
 }
+
+fileprivate var answerStyle: QuestionView.Style {
+    return QuestionView.Style.init(
+        cornerRadius: 10,
+        backgroundColor: UIColor.voteDarkGrey,
+        borderWidth: 0,
+        borderColor: UIColor.clear,
+        textColor: UIColor.voteLightGrey,
+        symbolColor: UIColor.voteLightGrey
+    )
+}
+
+fileprivate var navigationBar: VoteNavigationBar.Style {
+    return VoteNavigationBar.Style.init(
+        statusBarColor: .default,
+        backgroundColor: UIColor.voteLightGrey,
+        itemsTintColor: UIColor.voteDarkGrey,
+        titleColor: UIColor.voteDarkGrey)
+}
+

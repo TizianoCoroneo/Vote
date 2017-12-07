@@ -12,13 +12,22 @@ class AnswerView: QuestionView {
 
     @IBOutlet weak var voteLabel: UILabel!
     
+    private var utilityStyle = AppDelegate.style.answerView
+    override var style: QuestionView.Style {
+        get { return utilityStyle }
+        set {
+            utilityStyle = newValue
+            super.update(withStyle: newValue)
+        }
+    }
+    
     var voteCount: Int = 0 {
         didSet { voteLabel.text = "\(voteCount)" }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        guard let style = style else { return }
+        
         voteLabel.textColor = style.symbolColor
     }
 }

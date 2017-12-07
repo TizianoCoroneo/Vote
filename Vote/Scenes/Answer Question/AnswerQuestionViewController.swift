@@ -12,16 +12,14 @@ class AnswerQuestionViewController: UIViewController {
 
     @IBOutlet weak var questionView: QuestionView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        questionView.style = AppDelegate.style.questionView
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }

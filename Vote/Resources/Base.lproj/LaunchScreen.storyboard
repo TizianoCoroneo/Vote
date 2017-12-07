@@ -17,18 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="bjE-w5-VuQ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="bjE-w5-VuQ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="3a4-g7-w5L"/>
-                            <constraint firstItem="bjE-w5-VuQ" firstAttribute="bottom" secondItem="Ze5-6b-2t3" secondAttribute="bottom" id="MEg-eV-YBX"/>
-                            <constraint firstItem="bjE-w5-VuQ" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="on0-DX-9vE"/>
-                            <constraint firstItem="bjE-w5-VuQ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="zVP-b2-BSw"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -37,7 +26,4 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="LaunchScreen" width="414" height="736"/>
-    </resources>
 </document>

@@ -10,9 +10,13 @@ import UIKit
 
 class VoteNavigationBar: UINavigationBar {
 
+    var style: Style = AppDelegate.style.navBarStyle {
+        didSet { setupColor(style) }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupColor(AppDelegate.style.navBarStyle)
+        setupColor(style)
     }
 
     private func setupColor(_ style: Style) {
@@ -21,14 +25,14 @@ class VoteNavigationBar: UINavigationBar {
         self.tintColor = style.itemsTintColor
         self.titleTextAttributes = [NSAttributedStringKey.foregroundColor : style.titleColor]
     }
-
 }
 
 extension VoteNavigationBar {
     struct Style {
-        let statusBarColor: UIStatusBarStyle = .default
-        let backgroundColor: UIColor = UIColor.voteLightGrey
-        let itemsTintColor: UIColor = UIColor.voteDarkGrey
-        let titleColor: UIColor = UIColor.voteDarkGrey
+        let statusBarColor: UIStatusBarStyle
+        let backgroundColor: UIColor
+        let itemsTintColor: UIColor
+        let titleColor: UIColor
     }
 }
+

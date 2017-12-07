@@ -20,11 +20,8 @@ class QuestionTableViewCell: UITableViewCell {
     @IBOutlet private weak var question: QuestionView!
     @IBOutlet private weak var answer: AnswerView!
    
-    var style: Style? = nil {
-        didSet {
-            guard let style = style else { return }
-            updateAppearance(with: style)
-        }
+    var style: Style = AppDelegate.style.questionTableViewCell {
+        didSet { updateAppearance(with: style) }
     }
     
     var viewModel: ViewModel? = nil {
@@ -89,7 +86,7 @@ extension QuestionTableViewCell {
 extension StyleGuide {
     var questionTableViewCell: QuestionTableViewCell.Style {
         return QuestionTableViewCell.Style.init(
-            questionStyle: AppDelegate.style.questionStyle,
-            answerStyle: AppDelegate.style.answerStyle)
+            questionStyle: AppDelegate.style.questionView,
+            answerStyle: AppDelegate.style.answerView)
     }
 }
