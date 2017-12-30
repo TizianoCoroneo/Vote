@@ -10,20 +10,14 @@ import UIKit
 
 class AnswerQuestionViewController: UIViewController {
     
-    @IBOutlet weak var optionsView: QuestionOptionsView!
-    
-    @IBOutlet weak var questionView: QuestionView!
+    @IBOutlet private weak var answerView: AnswerQuestionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        questionView.style = AppDelegate.style.questionView
+        answerView.optionsAreUserInteractionEnabled = false
         
-        optionsView.optionsViews.forEach {
-            $0.isUserInteractionEnabled = false
-        }
-        
-        optionsView.optionState = [
+        answerView.optionState = [
             .closedAnswers(true),
             .timeLimit(nil),
             .partialResults(false),
@@ -33,7 +27,7 @@ class AnswerQuestionViewController: UIViewController {
             .secretAnswers(true),
         ]
     }
-
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionView" customModule="Vote" customModuleProvider="target">
+            <connections>
+                <outlet property="qLabel" destination="D5l-N7-FYg" id="N4s-Zu-4rN"/>
+                <outlet property="questionLabel" destination="dOK-ke-nvc" id="MYs-XO-hw8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LWr-MR-dnJ">
+                    <rect key="frame" x="0.0" y="5" width="370" height="105"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="600" verticalHuggingPriority="251" text="Q" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="60" translatesAutoresizingMaskIntoConstraints="NO" id="D5l-N7-FYg">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="105"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="EF2-qd-8qX"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="45"/>
+                            <color key="textColor" name="VoteDarkGrey"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="200" verticalHuggingPriority="240" horizontalCompressionResistancePriority="900" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="113" text="Why Trump has become president of the USA?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOK-ke-nvc">
+                            <rect key="frame" x="65" y="0.0" width="305" height="105"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                            <color key="textColor" name="VoteDarkGrey"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" name="VoteLightGrey"/>
+            <constraints>
+                <constraint firstItem="LWr-MR-dnJ" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-5" id="Jcw-AC-0lu"/>
+                <constraint firstItem="LWr-MR-dnJ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="UXQ-wd-OhF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="LWr-MR-dnJ" secondAttribute="trailing" constant="5" id="gPx-hG-aXo"/>
+                <constraint firstItem="LWr-MR-dnJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ppL-Le-PhO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="109.5" y="-222.5"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="VoteDarkGrey">
+            <color red="0.29019607843137257" green="0.29019607843137257" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="VoteLightGrey">
+            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -12,9 +12,7 @@ class QuestionOptionToggle: UIButton {
 
     typealias ToggleAction = ((QuestionOption) -> (QuestionOption))
     
-    var toggleInputClosure: ToggleAction {
-        return QuestionOptionToggle.toggleOnOff
-    }
+    var toggleInputClosure: ToggleAction = QuestionOptionToggle.toggleOnOff
     
     var toggleOption: QuestionOption = .closedAnswers(true) {
         didSet { updateImage(forOption: toggleOption) }

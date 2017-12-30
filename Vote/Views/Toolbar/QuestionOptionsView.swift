@@ -18,6 +18,16 @@ class QuestionOptionsView: UIStackView {
         get { return optionsViews.map { $0.toggleOption } }
     }
     
+    var optionActions: [QuestionOptionToggle.ToggleAction] {
+        set {
+            zip(optionsViews, newValue).forEach {
+                $0.0.toggleInputClosure = $0.1
+            }
+        } get {
+            return optionsViews.map { $0.toggleInputClosure }
+        }
+    }
+    
     var timeLimit: TimeInterval? {
         guard let timeOption = optionsViews.first(where: {
             return $0.toggleOption == .timeLimit(nil) ||

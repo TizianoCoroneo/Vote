@@ -92,7 +92,6 @@ class QuestionTableViewController: UITableViewController {
                 
                 cell.configure(
                     withViewModel: item)
-                cell.style = AppDelegate.style.questionTableViewCell
                 
                 return cell
         })

@@ -20,10 +20,6 @@ class QuestionTableViewCell: UITableViewCell {
     @IBOutlet private weak var question: QuestionView!
     @IBOutlet private weak var answer: AnswerView!
    
-    var style: Style = AppDelegate.style.questionTableViewCell {
-        didSet { updateAppearance(with: style) }
-    }
-    
     var viewModel: ViewModel? = nil {
         didSet {
             guard let viewModel = viewModel else { return }
@@ -70,10 +66,6 @@ class QuestionTableViewCell: UITableViewCell {
         answer.isHidden = viewModel.shouldDisplayAnswer
     }
     
-    private func updateAppearance(with style: Style) {
-        question.style = style.questionStyle
-        answer.style = style.answerStyle
-    }
 }
 
 extension QuestionTableViewCell {

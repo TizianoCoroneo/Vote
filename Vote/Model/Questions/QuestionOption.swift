@@ -30,12 +30,6 @@ enum QuestionOption: Hashable {
         ]
     }
     
-    static var actionDictionary: [QuestionOption : (QuestionOption) -> ()] = [:]
-    
-    var action: ((QuestionOption) -> ())? {
-        return QuestionOption.actionDictionary[self]
-    }
-    
     var active: Bool {
         switch self {
         case .closedAnswers(let value):
