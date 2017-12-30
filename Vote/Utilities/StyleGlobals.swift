@@ -32,18 +32,21 @@ fileprivate var questionStyle: QuestionView.Style {
         borderWidth: 0,
         borderColor: UIColor.clear,
         textColor: UIColor.voteDarkGrey,
-        symbolColor: UIColor.voteDarkGrey
+        symbolColor: UIColor.voteDarkGrey,
+        countColor: UIColor.clear
     )
 }
 
 fileprivate var answerStyle: QuestionView.Style {
-    return QuestionView.Style.init(
+    return QuestionView.Style
+        .init(
         cornerRadius: 10,
         backgroundColor: UIColor.voteDarkGrey,
         borderWidth: 0,
         borderColor: UIColor.clear,
         textColor: UIColor.voteLightGrey,
-        symbolColor: UIColor.voteLightGrey
+        symbolColor: UIColor.voteLightGrey,
+        countColor: UIColor.voteLightGrey
     )
 }
 

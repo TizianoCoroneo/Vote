@@ -11,10 +11,13 @@ import UIKit
 @IBDesignable
 class QuestionView: UIView {
 
+    /// Big Q label.
     @IBOutlet weak var qLabel: UILabel!
     
+    /// Main question text label.
     @IBOutlet weak var questionLabel: UILabel!
     
+    /// The view instantiated from the NIB.
     private weak var view: UIView! = nil
     
     var xibFileName: String {
@@ -22,7 +25,7 @@ class QuestionView: UIView {
     }
     
     var text: String = "lol" {
-        didSet { updateText(text) }
+        didSet { questionLabel?.text = text }
     }
     
     var preferredStyle: Style {
@@ -54,11 +57,6 @@ class QuestionView: UIView {
         loadView()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        update(withStyle: preferredStyle)
-    }
-    
     func loadView() {
         loadView(
             withName: xibFileName,
@@ -84,10 +82,6 @@ class QuestionView: UIView {
         s.addSubview(view)
         view.frame = s.bounds
     }
-    
-    private func updateText(_ string: String) {
-        questionLabel?.text = string
-    }
 }
 
 extension QuestionView {
@@ -98,5 +92,6 @@ extension QuestionView {
         let borderColor: UIColor
         let textColor: UIColor
         let symbolColor: UIColor
+        let countColor: UIColor
     }
 }

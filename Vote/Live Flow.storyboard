@@ -50,11 +50,9 @@
                                                 </stackView>
                                                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="O3N-Pe-TtX" userLabel="Question View" customClass="QuestionView" customModule="Vote" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="31.5" width="359" height="62.5"/>
-                                                    <color key="backgroundColor" name="VoteLightGrey"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" verticalCompressionResistancePriority="760" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="InL-Rb-Zk8" userLabel="Answer View" customClass="AnswerView" customModule="Vote" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="104" width="359" height="100"/>
-                                                    <color key="backgroundColor" name="VoteDarkGrey"/>
                                                 </view>
                                             </subviews>
                                         </stackView>
@@ -146,23 +144,20 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="740" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YX1-7Y-onq">
                                                 <rect key="frame" x="10" y="70" width="375" height="320"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" verticalHuggingPriority="260" verticalCompressionResistancePriority="620" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="090-YF-AxY" userLabel="Question View" customClass="QuestionView" customModule="Vote" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" verticalHuggingPriority="260" verticalCompressionResistancePriority="620" translatesAutoresizingMaskIntoConstraints="NO" id="090-YF-AxY" userLabel="Question View" customClass="QuestionView" customModule="Vote" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
-                                                        <color key="backgroundColor" name="VoteLightGrey"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="AJq-Fi-8pi"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" verticalHuggingPriority="260" verticalCompressionResistancePriority="600" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="oec-yF-zfm" userLabel="Answer View" customClass="AnswerView" customModule="Vote" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" verticalHuggingPriority="260" verticalCompressionResistancePriority="600" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="oec-yF-zfm" userLabel="Answer View" customClass="AnswerView" customModule="Vote" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="110" width="375" height="100"/>
-                                                        <color key="backgroundColor" name="VoteDarkGrey"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="Rzq-Se-XSM"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" verticalHuggingPriority="260" verticalCompressionResistancePriority="610" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="FLx-1v-9wF" userLabel="Answer View" customClass="AnswerView" customModule="Vote" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" verticalHuggingPriority="260" verticalCompressionResistancePriority="610" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="FLx-1v-9wF" userLabel="Answer View" customClass="AnswerView" customModule="Vote" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="220" width="375" height="100"/>
-                                                        <color key="backgroundColor" name="VoteDarkGrey"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="fEj-QE-pSC"/>
                                                         </constraints>
@@ -174,6 +169,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="RFf-v3-lgU" firstAttribute="top" secondItem="2xK-ic-RPH" secondAttribute="top" id="2AL-C9-aHK"/>
+                                    <constraint firstItem="MKf-ad-se6" firstAttribute="width" secondItem="2xK-ic-RPH" secondAttribute="width" id="4lD-m0-sP0"/>
                                     <constraint firstAttribute="bottom" secondItem="RFf-v3-lgU" secondAttribute="bottom" id="PFy-Vz-anG"/>
                                     <constraint firstItem="RFf-v3-lgU" firstAttribute="leading" secondItem="2xK-ic-RPH" secondAttribute="leading" id="PcM-Nz-PMW"/>
                                     <constraint firstAttribute="trailing" secondItem="RFf-v3-lgU" secondAttribute="trailing" id="V7M-vr-zq2"/>
@@ -182,10 +178,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="YX1-7Y-onq" firstAttribute="width" secondItem="9Oc-Gs-r55" secondAttribute="width" constant="-20" id="71Y-Bc-oBs"/>
+                            <constraint firstItem="YX1-7Y-onq" firstAttribute="width" secondItem="9Oc-Gs-r55" secondAttribute="width" constant="-20" id="0FU-WI-wda"/>
                             <constraint firstAttribute="trailing" secondItem="2xK-ic-RPH" secondAttribute="trailing" id="G24-6u-jZE"/>
                             <constraint firstItem="2xK-ic-RPH" firstAttribute="top" secondItem="9Oc-Gs-r55" secondAttribute="top" id="KhI-2a-wCI"/>
-                            <constraint firstItem="MKf-ad-se6" firstAttribute="width" secondItem="9Oc-Gs-r55" secondAttribute="width" id="Mpm-Xa-GuX"/>
                             <constraint firstAttribute="bottom" secondItem="2xK-ic-RPH" secondAttribute="bottom" id="Zgk-ss-DkV"/>
                             <constraint firstItem="2xK-ic-RPH" firstAttribute="leading" secondItem="9Oc-Gs-r55" secondAttribute="leading" id="dUc-TB-bvX"/>
                             <constraint firstItem="RFf-v3-lgU" firstAttribute="width" secondItem="9Oc-Gs-r55" secondAttribute="width" id="fD6-db-Du8"/>
@@ -238,15 +233,6 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="VoteDarkGrey">
-            <color red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="VoteDarkGrey">
-            <color red="0.29019607843137257" green="0.29019607843137257" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="VoteLightGrey">
-            <color red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="VoteTextGrey">
             <color red="0.77300000189999996" green="0.77300000189999996" blue="0.77300000189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
