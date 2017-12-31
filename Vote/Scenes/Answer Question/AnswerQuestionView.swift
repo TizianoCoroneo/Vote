@@ -39,8 +39,8 @@ class AnswerQuestionView: UIView {
         didSet { questionView.text = questionText }
     }
     
-    var selectedAnswerIndex: Int? = nil {
-        didSet { setInitialAnswerSelection() }
+    var selectedAnswersIndex: [Int] = [] {
+        didSet { setInitialAnswersSelection() }
     }
     
     var answers: [(String, Int?)] = [] {
@@ -63,9 +63,12 @@ class AnswerQuestionView: UIView {
         
         let view = AnswerView()
         
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
         view.text = text
         view.voteCount = voteCount
         view.isUserInteractionEnabled = true
+        view.initialAnimatedProperties()
         
         return view
     }
@@ -88,10 +91,16 @@ class AnswerQuestionView: UIView {
         }
     }
     
-    private func setInitialAnswerSelection() {
-        if let index = selectedAnswerIndex,
-            index < answerViews.count {
-            answerViews[index].setSelected(true)
+    private func setInitialAnswersSelection() {
+        selectedAnswersIndex.forEach {
+            index in
+            
+            guard
+                index < answerViews.count
+                else { return }
+            
+            answerViews[index]
+                .setSelected(true)
         }
     }
     

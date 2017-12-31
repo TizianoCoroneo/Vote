@@ -69,7 +69,7 @@
                                     <outlet property="hourLabel" destination="Cu1-yz-RC2" id="qle-HT-CrR"/>
                                     <outlet property="question" destination="O3N-Pe-TtX" id="Ebm-Ca-EGN"/>
                                     <outlet property="votesLabel" destination="Bnw-PS-qrm" id="QGu-Cx-d4t"/>
-                                    <segue destination="fV2-fs-lDT" kind="show" action="showDetailViewController:sender:" id="uaa-gD-KRL"/>
+                                    <segue destination="fV2-fs-lDT" kind="showDetail" identifier="ShowAnswerQuestionView" id="uaa-gD-KRL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

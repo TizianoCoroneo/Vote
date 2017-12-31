@@ -28,7 +28,7 @@ class AnswerQuestionViewController: UIViewController {
             ("Hang the DJ", 27),
         ]
         
-        answerView.selectedAnswerIndex = 1
+        answerView.selectedAnswersIndex = [0, 1]
         
         answerView.optionState = [
             .closedAnswers(true),

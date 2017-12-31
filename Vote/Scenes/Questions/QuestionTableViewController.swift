@@ -31,7 +31,7 @@ class QuestionTableViewController: UITableViewController {
     typealias CellVM = QuestionTableViewCell.ViewModel
 
     var style: StyleGuide = AppDelegate.style
-
+    
     private let viewModels = [SectionOfCellVM.init(items: [
         CellVM(
             shouldDisplayAnswer: true,
@@ -119,4 +119,5 @@ class QuestionTableViewController: UITableViewController {
                 dataSource: animatedDataSource))
             .disposed(by: disposeBag)
     }
+    
 }

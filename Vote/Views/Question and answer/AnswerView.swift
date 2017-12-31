@@ -45,6 +45,7 @@ class AnswerView: QuestionView {
             .subviews
             .filter ({ $0 == selectedMarkView })
             .count == 0 {
+            selectedMarkView.translatesAutoresizingMaskIntoConstraints = true
             self.addSubview(self.selectedMarkView)
             initialAnimatedProperties()
         }
@@ -59,12 +60,14 @@ class AnswerView: QuestionView {
             bounds] in
             
             super.initialAnimatedProperties()
+            guard let markView = selectedMarkView else { return }
             
-            selectedMarkView?.frame = CGRect.init(
+            markView.frame = CGRect.init(
                 x: markInitialPosition,
                 y: 0,
                 width: slideDistance,
                 height: bounds.height)
+            
         }
     }
     
@@ -76,7 +79,9 @@ class AnswerView: QuestionView {
             bounds] in
             super.targetAnimatedProperties()
             
-            selectedMarkView?.frame = CGRect(
+            guard let markView = selectedMarkView else { return }
+            
+            markView.frame = CGRect(
                 x: markTargetPosition,
                 y: 0,
                 width: slideDistance,
@@ -89,22 +94,29 @@ class AnswerView: QuestionView {
         voteLabel?.textColor = style.symbolColor
     }
     
-    override func handleTap(_ recognizer: UITapGestureRecognizer?) {
+    override func awakeFromNib() {
+        super.awakeFromNib()
         addMarkIfNeeded()
-        super.handleTap(recognizer)
     }
     
-    override func handlePan(
-        _ recognizer: UIPanGestureRecognizer) {
+    override func willMove(toSuperview newSuperview: UIView?) {
+        super.willMove(toSuperview: newSuperview)
         addMarkIfNeeded()
-        super.handlePan(recognizer)
     }
     
     func setSelected(_ selected: Bool) {
+        let sel: ToggleState = selected ? .on : .off
+
         guard
-            state == (selected ? .off : .on)
+            state != sel
             else { return }
-        handleTap(nil)
+        
+        state = sel
+        
+        selected
+            ? targetAnimatedProperties()
+            : initialAnimatedProperties()
+        layoutIfNeeded()
     }
 }
 
