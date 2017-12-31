@@ -18,5 +18,4 @@ class QuestionTableView: UITableView {
         set { } get { return 150 }
     }
     
-    
 }

@@ -10,13 +10,16 @@ import UIKit
 
 class AnswerQuestionViewController: UIViewController {
     
+    /// Corresponding `AnswerQuestionView`.
     @IBOutlet private weak var answerView: AnswerQuestionView!
     
+    /// Does the current user own this question?
     var ownQuestion: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
+        // Set up view's data
         answerView.delegate = self
         answerView.optionsAreUserInteractionEnabled = false
         
@@ -40,23 +43,25 @@ class AnswerQuestionViewController: UIViewController {
             .secretAnswers(true),
         ]
         
-        configureNavigationItem(navigationItem)
+        if ownQuestion { configureEditButton() }
     }
     
-    func configureNavigationItem(_ item: UINavigationItem) {
+    /// Configure the navigation item with an edit button if the user owns the question.
+    func configureEditButton() {
         guard ownQuestion else { return }
         
         navigationItem.rightBarButtonItem = nil
         navigationItem.rightBarButtonItems = nil
         
-        let newButton = UIBarButtonItem.init(
+        let editButton = UIBarButtonItem.init(
             barButtonSystemItem: .edit,
             target: self,
             action: #selector(editPressed))
         
-        navigationItem.rightBarButtonItem = newButton
+        navigationItem.rightBarButtonItem = editButton
     }
     
+    /// Gets called whenever the edit button is pressed
     @objc func editPressed() {
         
     }
@@ -69,12 +74,16 @@ class AnswerQuestionViewController: UIViewController {
 
 extension AnswerQuestionViewController: AnswerQuestionViewDelegate {
     
+    /// It is invoked when an answer view is pressed.
+    ///
+    /// - Parameters:
+    ///   - index: Index of the pressed answer view in the answers array.
+    ///   - text: Text of the pressed answer.
     func answerSelected(
         withIndex index: Int,
         text: String) {
         
         print("answer selected index: \(index), text: \(text)")
-        
     }
 }
 

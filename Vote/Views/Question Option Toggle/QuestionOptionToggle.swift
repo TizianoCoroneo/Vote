@@ -8,8 +8,8 @@
 
 import UIKit
 
+/// Toggle button that represents a single Question Option.
 class QuestionOptionToggle: UIButton {
-
     typealias ToggleAction = ((QuestionOption) -> (QuestionOption))
     
     var toggleInputClosure: ToggleAction = QuestionOptionToggle.toggleOnOff
