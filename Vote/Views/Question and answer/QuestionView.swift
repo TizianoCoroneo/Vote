@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class QuestionView: UIView {
+class QuestionView: UIView, ToggleStateAnimatable {
 
     /// Big Q label.
     @IBOutlet weak var qLabel: UILabel!
@@ -18,7 +18,7 @@ class QuestionView: UIView {
     @IBOutlet weak var questionLabel: UILabel!
     
     /// The view instantiated from the NIB.
-    private weak var view: UIView! = nil
+    weak var view: UIView! = nil
     
     var xibFileName: String {
         return "QuestionView"
@@ -31,6 +31,31 @@ class QuestionView: UIView {
     var preferredStyle: Style {
         return AppDelegate.style.questionView
     }
+    
+    var slideDistance: CGFloat {
+        return qLabel.frame.width
+    }
+    
+    enum Direction {
+        case left
+        case right
+    }
+    
+    var preferredSlideDirection: Direction {
+        
+        let locale = Locale.current
+        let language = locale.languageCode!
+        let languageDirection = Locale
+            .characterDirection(
+                forLanguage: language)
+        
+        return languageDirection == .leftToRight ?
+            .left : .right
+    }
+    
+    //----------------
+    //----------------
+    //----------------
     
     func update(withStyle style: Style) {
         layer.cornerRadius = style.cornerRadius
@@ -47,6 +72,10 @@ class QuestionView: UIView {
         questionLabel.textColor = style.textColor
     }
     
+    convenience init() {
+        self.init(frame: CGRect())
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadView()
@@ -57,14 +86,22 @@ class QuestionView: UIView {
         loadView()
     }
     
-    func loadView() {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        state == .on
+            ? targetAnimatedProperties()
+            : initialAnimatedProperties()
+    }
+    
+    private func loadView() {
         loadView(
             withName: xibFileName,
             forSelf: self)
         update(withStyle: preferredStyle)
+        setupGestures()
     }
-    
-    func loadView(
+
+    private func loadView(
         withName name: String,
         forSelf s: QuestionView) {
         let bundle = Bundle.init(
@@ -81,6 +118,108 @@ class QuestionView: UIView {
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         s.addSubview(view)
         view.frame = s.bounds
+        self.isUserInteractionEnabled = false
+    }
+    
+    // ______________________
+    // Interactive & Interruptible animation
+    // ______________________
+    
+    var state: ToggleState = .off
+    
+    var runningAnimators =  [UIViewPropertyAnimator]()
+    
+    // Tracks progress when interrupted for all Animators
+    var progressWhenInterrupted = [UIViewPropertyAnimator : CGFloat]()
+    
+    var duration: TimeInterval {
+        return 0.2
+    }
+    
+    var processAnimationProgress: (CGFloat) -> (CGFloat) {
+        return { [weak self] x in
+            return (x) / (self?.slideDistance ?? 100)
+        }
+    }
+    
+    var initialAnimatedProperties: (() -> ()) {
+        return {
+            [weak view, viewFrameInitialPosition] in
+            
+            view?.frame.origin.x = viewFrameInitialPosition
+            
+            view?.layoutIfNeeded()
+        }
+    }
+    
+    var targetAnimatedProperties: (() -> ()) {
+        return {
+            [weak view, viewFrameTargetPosition] in
+            view?.frame.origin.x = viewFrameTargetPosition
+            
+            view?.layoutIfNeeded()
+        }
+    }
+    
+    private let viewFrameInitialPosition: CGFloat = 0
+    private var viewFrameTargetPosition: CGFloat {
+        return preferredSlideDirection == .left
+            ? -slideDistance
+            : slideDistance
+    }
+    
+    private func setupGestures() {
+        let tapRecognizer = UITapGestureRecognizer.init(
+            target: self,
+            action: #selector(handleTap(_:)))
+        self.addGestureRecognizer(tapRecognizer)
+        
+        let panGestureRecognizer = UIPanGestureRecognizer.init(
+            target: self,
+            action: #selector(handlePan(_:)))
+        self.addGestureRecognizer(panGestureRecognizer)
+    }
+    
+    @IBAction func handleTap(_ recognizer: UITapGestureRecognizer?) {
+        animateOrReverseRunningTransition(
+            destinationState: !state,
+            duration: duration)
+    }
+    
+    @IBAction func handlePan(_ recognizer: UIPanGestureRecognizer) {
+        switch recognizer.state {
+        case .began:
+            startInteractiveTransition(
+                destinationState: !state,
+                duration: duration)
+        case .changed:
+            let translation = recognizer.translation(in: self)
+            updateInteractiveTransition(
+                distanceTraveled: translation.x)
+        case .cancelled, .failed:
+            continueInteractiveTransition(cancel: true)
+        case .ended:
+            let isCancelled = isGestureCancelled(recognizer)
+            continueInteractiveTransition(cancel: isCancelled)
+        default:
+            break
+        }
+    }
+    
+    private func isGestureCancelled(_ recognizer: UIPanGestureRecognizer) -> Bool {
+        let isCancelled: Bool
+        
+        let velocityX = recognizer.velocity(in: self).x
+        
+        if velocityX != 0 {
+            let isPanningOn = preferredSlideDirection == .left ? velocityX < 0 : velocityX > 0
+            isCancelled = (state == .on && !isPanningOn) ||
+                (state == .off && isPanningOn)
+        } else {
+            isCancelled = false
+        }
+        
+        return isCancelled
     }
 }
 

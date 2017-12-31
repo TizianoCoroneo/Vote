@@ -34,13 +34,13 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="T8w-Al-zr3" userLabel="Info view">
                                                     <rect key="frame" x="0.0" y="0.0" width="359" height="21.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19:49" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cu1-yz-RC2">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19:49" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cu1-yz-RC2">
                                                             <rect key="frame" x="0.0" y="0.0" width="177" height="21.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <color key="textColor" name="VoteTextGrey"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45 votes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bnw-PS-qrm">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45 votes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bnw-PS-qrm">
                                                             <rect key="frame" x="182" y="0.0" width="177" height="21.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <color key="textColor" name="VoteTextGrey"/>
@@ -146,21 +146,12 @@
                                                 <subviews>
                                                     <view contentMode="scaleToFill" verticalHuggingPriority="260" verticalCompressionResistancePriority="620" translatesAutoresizingMaskIntoConstraints="NO" id="090-YF-AxY" userLabel="Question View" customClass="QuestionView" customModule="Vote" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="AJq-Fi-8pi"/>
-                                                        </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" verticalHuggingPriority="260" verticalCompressionResistancePriority="600" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="oec-yF-zfm" userLabel="Answer View" customClass="AnswerView" customModule="Vote" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="110" width="375" height="100"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="Rzq-Se-XSM"/>
-                                                        </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" verticalHuggingPriority="260" verticalCompressionResistancePriority="610" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="FLx-1v-9wF" userLabel="Answer View" customClass="AnswerView" customModule="Vote" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="220" width="375" height="100"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="fEj-QE-pSC"/>
-                                                        </constraints>
                                                     </view>
                                                 </subviews>
                                             </stackView>
@@ -187,11 +178,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="urO-cl-8GS"/>
                         <connections>
+                            <outlet property="answersContainer" destination="YX1-7Y-onq" id="A3L-aF-vn5"/>
                             <outlet property="optionsView" destination="OSL-N1-Q7U" id="RhZ-IO-tNL"/>
                             <outlet property="questionView" destination="090-YF-AxY" id="qwc-0h-Jao"/>
                         </connections>
                     </view>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Vts-cz-9aG"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="answerView" destination="9Oc-Gs-r55" id="JRw-S3-KAI"/>
                     </connections>

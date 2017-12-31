@@ -16,12 +16,16 @@ class AnswerQuestionView: UIView {
     
     @IBOutlet private weak var questionView: QuestionView!
 
+    @IBOutlet private weak var answersContainer: UIStackView!
+    
+    // MARK: - Public fields
+    
+    weak var delegate: AnswerQuestionViewDelegate?
+    
     // MARK: - Properties
     
     var optionState: [QuestionOption] = [] {
-        didSet {
-            optionsView.optionState = optionState
-        }
+        didSet { optionsView.optionState = optionState }
     }
     
     var optionsAreUserInteractionEnabled = false {
@@ -31,30 +35,90 @@ class AnswerQuestionView: UIView {
         }
     }
     
-    var questionText: String {
-        get { return questionView.text }
-        set { questionView.text = questionText }
+    var questionText: String = "" {
+        didSet { questionView.text = questionText }
     }
     
-    var answers: [(String, Int?)] {
-        set {  }
-        get { return [] }
+    var selectedAnswerIndex: Int? = nil {
+        didSet { setInitialAnswerSelection() }
+    }
+    
+    var answers: [(String, Int?)] = [] {
+        didSet { updateAnswers() }
+    }
+    
+    // MARK: - Private Properties
+    
+    private var answerViews: [AnswerView] {
+        return answersContainer.subviews.flatMap {
+            $0 as? AnswerView
+        }
     }
     
     // MARK: - Utility functions
     
-    private func createAnswerView() -> AnswerView {
-        let view = AnswerView(
-            frame: CGRect())
+    private func createAnswerView(
+        text: String,
+        voteCount: Int) -> AnswerView {
         
+        let view = AnswerView()
         
+        view.text = text
+        view.voteCount = voteCount
+        view.isUserInteractionEnabled = true
         
         return view
     }
     
-    private func updateOptionsInteraction( enabled: Bool) {
+    private func removeAnswers() {
+        answersContainer.subviews
+            .filter { $0 is AnswerView }
+            .forEach { $0.removeFromSuperview() }
+    }
+    
+    private func updateAnswers() {
+        removeAnswers()
+        answers.forEach {
+            [weak answersContainer] answer in
+            let newView = createAnswerView(
+                text: answer.0,
+                voteCount: answer.1 ?? 0)
+            
+            answersContainer?.addArrangedSubview(newView)
+        }
+    }
+    
+    private func setInitialAnswerSelection() {
+        if let index = selectedAnswerIndex,
+            index < answerViews.count {
+            answerViews[index].setSelected(true)
+        }
+    }
+    
+    private func updateOptionsInteraction(enabled: Bool) {
         optionsView.optionsViews.forEach {
             $0.isUserInteractionEnabled = enabled
         }
     }
+    
+    func index(ofAnswer answer: AnswerView) -> Int? {
+        return answers.enumerated().first {
+            $0.element.0 == answer.text
+        }?.offset
+    }
+    
+    private func select(answer: AnswerView, index: Int) {
+        answerViews.forEach { $0.setSelected(false) }
+        answer.setSelected(true)
+    }
 }
+
+protocol AnswerQuestionViewDelegate: class {
+    func answerSelected(
+        withIndex index: Int,
+        text: String)
+}
+
+
+
+

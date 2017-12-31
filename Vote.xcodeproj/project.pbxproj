@@ -30,6 +30,7 @@
 		35C03EED1FD4599D000B225A /* Themes.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35C03EEC1FD4599D000B225A /* Themes.xcassets */; };
 		35C03EEF1FD45E78000B225A /* VoteNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C03EEE1FD45E78000B225A /* VoteNavigationBar.swift */; };
 		35C03EF31FD493C7000B225A /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C03EF21FD493C7000B225A /* QuestionTableViewCell.swift */; };
+		35D4FDB11FF8A8D4003E3EFD /* ToggleStateAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4FDB01FF8A8D4003E3EFD /* ToggleStateAnimatable.swift */; };
 		35E710421FD74E8D006CE315 /* PrimarySplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E710411FD74E8D006CE315 /* PrimarySplitViewController.swift */; };
 		35E710461FD751DC006CE315 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E710451FD751DC006CE315 /* QuestionView.swift */; };
 		35E710481FD75378006CE315 /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E710471FD75377006CE315 /* AnswerView.swift */; };
@@ -97,6 +98,9 @@
 		35C03EEC1FD4599D000B225A /* Themes.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Themes.xcassets; sourceTree = "<group>"; };
 		35C03EEE1FD45E78000B225A /* VoteNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteNavigationBar.swift; sourceTree = "<group>"; };
 		35C03EF21FD493C7000B225A /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		35D4FDAE1FF86100003E3EFD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		35D4FDAF1FF86100003E3EFD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		35D4FDB01FF8A8D4003E3EFD /* ToggleStateAnimatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleStateAnimatable.swift; sourceTree = "<group>"; };
 		35E710411FD74E8D006CE315 /* PrimarySplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimarySplitViewController.swift; sourceTree = "<group>"; };
 		35E710451FD751DC006CE315 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		35E710471FD75377006CE315 /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
@@ -242,6 +246,7 @@
 			children = (
 				3587B86C1FD44E57004B7B54 /* Color Utilities.swift */,
 				3587B86D1FD44E57004B7B54 /* StyleGlobals.swift */,
+				35D4FDB01FF8A8D4003E3EFD /* ToggleStateAnimatable.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -731,6 +736,7 @@
 				35C03EF31FD493C7000B225A /* QuestionTableViewCell.swift in Sources */,
 				35363EAC1FD9DF760019A873 /* QuestionOptionToggle.swift in Sources */,
 				35C03EEF1FD45E78000B225A /* VoteNavigationBar.swift in Sources */,
+				35D4FDB11FF8A8D4003E3EFD /* ToggleStateAnimatable.swift in Sources */,
 				35B1AA251FD35C1900362712 /* AppDelegate.swift in Sources */,
 				35660BCF1FD37A6100FBA959 /* UserModel.swift in Sources */,
 				35ECC5C61FD61AB7009F5977 /* QuestionModel.swift in Sources */,
@@ -773,6 +779,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				35B1AA291FD35C1900362712 /* Base */,
+				35D4FDAF1FF86100003E3EFD /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -781,6 +788,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				35B1AA311FD35C1900362712 /* Base */,
+				35D4FDAE1FF86100003E3EFD /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -792,6 +800,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -849,6 +858,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

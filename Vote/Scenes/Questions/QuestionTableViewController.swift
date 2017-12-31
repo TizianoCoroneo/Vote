@@ -105,7 +105,7 @@ class QuestionTableViewController: UITableViewController {
             let id: ([SectionOfCellVM]) -> [SectionOfCellVM] = { $0 }
             let voteSorted: ([SectionOfCellVM]) -> [SectionOfCellVM] = { sections in
                 return sections.map { section in
-                    print("Sorting")
+                    
                     let sorted = section.items.sorted(by: { a, b in
                         a.totalVoteCount > b.totalVoteCount
                     })
