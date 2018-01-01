@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxDataSources
+import RealmSwift
 
 fileprivate struct SectionOfCellVM: AnimatableSectionModelType {
     typealias Identity = Int
@@ -32,29 +33,18 @@ class QuestionTableViewController: UITableViewController {
 
     var style: StyleGuide = AppDelegate.style
     
-    private let viewModels = [SectionOfCellVM.init(items: [
-        CellVM(
-            shouldDisplayAnswer: true,
-            hour: "09:42",
-            answerVoteCount: 42,
-            totalVoteCount: 120,
-            question: "Why Trump 1?",
-            answer: "I love Haskell 1"),
-        CellVM(
-            shouldDisplayAnswer: false,
-            hour: "09:42",
-            answerVoteCount: 42,
-            totalVoteCount: 110,
-            question: "Why Trump 2?",
-            answer: "I love Haskell 2"),
-        CellVM(
-            shouldDisplayAnswer: true,
-            hour: "09:42",
-            answerVoteCount: 42,
-            totalVoteCount: 130,
-            question: "Why Trump? 3",
-            answer: "I love Haskell 3")
-        ])]
+    private var refresh = Variable<()>.init(())
+    
+    private var questions: [QuestionModel] {
+        return RealmManager.shared.fetchAll()
+    }
+    
+    private var viewModels: [SectionOfCellVM] {
+        return [SectionOfCellVM.init(
+            items: questions.map {
+                $0.toQuestionCellViewModel()
+        })]
+    }
     
     private let disposeBag = DisposeBag()
     private var segmentedControl: UISegmentedControl! = nil
@@ -75,6 +65,14 @@ class QuestionTableViewController: UITableViewController {
     
     private func setupTableView() {
         tableView.dataSource = nil
+        
+        let refreshControl = UIRefreshControl.init()
+        refreshControl.addTarget(
+            self,
+            action: #selector(refreshChanged(_:)),
+            for: .valueChanged)
+        
+        tableView.refreshControl = refreshControl
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 150
@@ -97,8 +95,11 @@ class QuestionTableViewController: UITableViewController {
         })
         
         // Use the segmented view input to decide sort method for the question and sort them accordingly.
-        segmentedControl.rx.selectedSegmentIndex.flatMap {
-            [weak self] (index: Int) -> Observable<[SectionOfCellVM]> in
+        Observable.combineLatest(
+            refresh.asObservable(),
+            segmentedControl.rx.selectedSegmentIndex.asObservable())
+            .flatMap {
+            [weak self] (_, index: Int) -> Observable<[SectionOfCellVM]> in
             
             guard let dataSource = self?.viewModels else { return Observable.just([]) }
             
@@ -120,4 +121,10 @@ class QuestionTableViewController: UITableViewController {
             .disposed(by: disposeBag)
     }
     
+    @objc func refreshChanged(_ sender: Any) {
+        print("sender = \(sender)")
+        
+        refresh.value = ()
+        refreshControl?.endRefreshing()
+    }
 }

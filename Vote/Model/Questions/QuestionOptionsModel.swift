@@ -12,8 +12,7 @@ import RealmSwift
 
 class QuestionOptionsModel: Object {
     
-    @objc dynamic var activeOptions: [Bool] =
-        Array.init(repeating: false, count: 7)
+    let activeOptions = List<Bool>()
     
     @objc dynamic var timeLimit: Double = 0
     
@@ -36,7 +35,7 @@ extension QuestionOption {
         
         let model = QuestionOptionsModel()
         
-        model.activeOptions = options.map { $0.active }
+        model.activeOptions.append(objectsIn: options.map { $0.active }) 
         model.timeLimit = options.first(where: {
             $0.id == QuestionOption.timeLimit(nil).id
         })?.timeLimit ?? 0

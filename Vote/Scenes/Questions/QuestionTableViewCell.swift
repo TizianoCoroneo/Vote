@@ -10,6 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 import RxDataSources
+import SwiftDate
 
 class QuestionTableViewCell: UITableViewCell {
     
@@ -65,7 +66,30 @@ class QuestionTableViewCell: UITableViewCell {
         
         answer.isHidden = viewModel.shouldDisplayAnswer
     }
-    
+}
+
+private let dateFormatter: DateFormatter = DateFormatter()
+
+extension QuestionModel {
+    func toQuestionCellViewModel() -> QuestionTableViewCell.ViewModel {
+        
+        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = .short
+        
+        let hourString = dateFormatter.string(from: self.timeStamp)
+        
+        let shouldDisplayAnswer = firstTenVotedOptions.first != nil
+        
+        return QuestionTableViewCell.ViewModel.init(
+            shouldDisplayAnswer: shouldDisplayAnswer,
+            hour: hourString,
+            answerVoteCount: firstTenVotedOptions.first?
+                .votes ?? 0,
+            totalVoteCount: totalNumberOfVotes,
+            question: question,
+            answer: firstTenVotedOptions.first?
+                .answer ?? "")
+    }
 }
 
 extension QuestionTableViewCell {

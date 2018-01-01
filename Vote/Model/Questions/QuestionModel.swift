@@ -22,4 +22,3 @@ class VotedAnswer: Object {
     @objc dynamic var answer: String = ""
     @objc dynamic var votes: Int = 0
 }
-
