@@ -45,8 +45,9 @@ class AnswerView: QuestionView {
             .subviews
             .filter ({ $0 == selectedMarkView })
             .count == 0 {
-            selectedMarkView.translatesAutoresizingMaskIntoConstraints = true
+            
             self.addSubview(self.selectedMarkView)
+            
             initialAnimatedProperties()
         }
     }
@@ -92,11 +93,6 @@ class AnswerView: QuestionView {
     override func update(withStyle style: Style) {
         super.update(withStyle: style)
         voteLabel?.textColor = style.symbolColor
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        addMarkIfNeeded()
     }
     
     override func willMove(toSuperview newSuperview: UIView?) {

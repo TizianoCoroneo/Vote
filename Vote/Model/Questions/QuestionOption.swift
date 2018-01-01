@@ -13,7 +13,7 @@ enum QuestionOption: Hashable {
     case closedAnswers(Bool)
     case partialResults(Bool)
     case timeLimit(TimeInterval?)
-    case privateVote(Bool)
+    case privateQuestion(Bool)
     case lockedAnswers(Bool)
     case multipleAnswers(Bool)
     case secretAnswers(Bool)
@@ -23,7 +23,7 @@ enum QuestionOption: Hashable {
             .closedAnswers(true),
             .timeLimit(nil),
             .partialResults(true),
-            .privateVote(true),
+            .privateQuestion(true),
             .lockedAnswers(true),
             .multipleAnswers(true),
             .secretAnswers(true)
@@ -38,7 +38,7 @@ enum QuestionOption: Hashable {
             return value
         case .timeLimit(let value):
             return value == nil
-        case .privateVote(let value):
+        case .privateQuestion(let value):
             return value
         case .lockedAnswers(let value):
             return value
@@ -57,8 +57,8 @@ enum QuestionOption: Hashable {
             return value ? #imageLiteral(resourceName: "Icons/Partial results") : #imageLiteral(resourceName: "Icons/No partial results")
         case .timeLimit(let value):
             return value == nil ? #imageLiteral(resourceName: "Icons/No time limit") : #imageLiteral(resourceName: "Icons/Time Limit")
-        case .privateVote(let value):
-            return value ? #imageLiteral(resourceName: "Icons/Private votation") : #imageLiteral(resourceName: "Icons/Public votation")
+        case .privateQuestion(let value):
+            return value ? #imageLiteral(resourceName: "Icons/Private question") : #imageLiteral(resourceName: "Icons/Public question")
         case .lockedAnswers(let value):
             return value ? #imageLiteral(resourceName: "Icons/Locked answers") : #imageLiteral(resourceName: "Icons/Unlocked answers")
         case .multipleAnswers(let value):
@@ -76,7 +76,7 @@ enum QuestionOption: Hashable {
             return 1
         case .partialResults(_):
             return 2
-        case .privateVote(_):
+        case .privateQuestion(_):
             return 3
         case .lockedAnswers(_):
             return 4
@@ -107,14 +107,33 @@ enum QuestionOption: Hashable {
             return .partialResults(value)
         case .timeLimit(_):
             return .timeLimit(time)
-        case .privateVote(_):
-            return .privateVote(value)
+        case .privateQuestion(_):
+            return .privateQuestion(value)
         case .lockedAnswers(_):
             return .lockedAnswers(value)
         case .multipleAnswers(_):
             return .multipleAnswers(value)
         case .secretAnswers(_):
             return .secretAnswers(value)
+        }
+    }
+    
+    var name: String {
+        switch self {
+        case .closedAnswers(let value):
+            return value ? "Closed answers" : "Open answers"
+        case .partialResults(let value):
+            return value ? "Partial results" : "No partial results"
+        case .timeLimit(let value):
+            return value == nil ? "No time limit" : "Time limit"
+        case .privateQuestion(let value):
+            return value ? "Private question" : "Public question"
+        case .lockedAnswers(let value):
+            return value ? "Locked answers" : "Unlocked answers"
+        case .multipleAnswers(let value):
+            return value ? "Multiple answers" : "Single answer"
+        case .secretAnswers(let value):
+            return value ? "Secret answers" : "Public answers"
         }
     }
     

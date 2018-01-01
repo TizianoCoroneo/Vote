@@ -115,8 +115,18 @@ class QuestionView: UIView, ToggleStateAnimatable {
                 options: nil).first as? UIView
             else { return }
         view = newView
-        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
         s.addSubview(view)
+        
+        view.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        view.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        view.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        view.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        
+        view.accessibilityIdentifier = "\(self.text)"
+        
         view.frame = s.bounds
         self.isUserInteractionEnabled = false
     }

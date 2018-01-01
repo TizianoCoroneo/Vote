@@ -37,7 +37,7 @@ class AnswerQuestionViewController: UIViewController {
             .closedAnswers(true),
             .timeLimit(nil),
             .partialResults(false),
-            .privateVote(false),
+            .privateQuestion(false),
             .lockedAnswers(false),
             .multipleAnswers(true),
             .secretAnswers(true),

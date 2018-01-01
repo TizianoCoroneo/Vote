@@ -9,6 +9,7 @@
 import UIKit
 
 /// Toggle button that represents a single Question Option.
+@IBDesignable
 class QuestionOptionToggle: UIButton {
     typealias ToggleAction = ((QuestionOption) -> (QuestionOption))
     
@@ -19,18 +20,31 @@ class QuestionOptionToggle: UIButton {
     }
     
     private func updateImage(forOption option: QuestionOption) {
-        setImage(option.image.withRenderingMode(.alwaysOriginal), for: .normal)
+        setImage(
+            option.image
+                .withRenderingMode(.alwaysOriginal),
+            for: .normal)
+        self.accessibilityLabel = option.name
+    }
+    
+    private func setup() {
+        setImage(
+            toggleOption.image
+                .withRenderingMode(.alwaysOriginal),
+            for: .normal)
+        if self.allTargets.count == 0 {
+            addTarget(
+                self,
+                action: #selector(optionPressed),
+                for: .touchUpInside)
+        }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setImage(toggleOption.image.withRenderingMode(.alwaysOriginal), for: .normal)
-        addTarget(
-            self,
-            action: #selector(optionPressed),
-            for: .touchUpInside)
+        setup()
     }
-    
+
     @objc func optionPressed() {
         toggleOption = toggleInputClosure(toggleOption)
     }
