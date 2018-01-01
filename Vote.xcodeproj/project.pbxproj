@@ -10,13 +10,16 @@
 		00B7F3F0F49AF3348E641431 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823DFBA31B6C238B472B7353 /* SystemConfiguration.framework */; };
 		087F71B830380E7BE8BFDE8C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D891857D8941D7B3AC8094 /* CoreVideo.framework */; };
 		1547896EE5EAD8BD75D4BB93 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C4A2B37D9C122487E5BDDD /* CoreTelephony.framework */; };
-		35308FAE1FE56C08001C800A /* Live Flow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35308FAD1FE56C08001C800A /* Live Flow.storyboard */; };
 		35308FB01FE57175001C800A /* AnswerQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35308FAF1FE57175001C800A /* AnswerQuestionView.swift */; };
 		35308FB31FE57710001C800A /* AnswerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35308FB21FE57710001C800A /* AnswerView.xib */; };
 		35363EAC1FD9DF760019A873 /* QuestionOptionToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35363EAB1FD9DF760019A873 /* QuestionOptionToggle.swift */; };
 		35363EAE1FD9EB190019A873 /* QuestionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35363EAD1FD9EB190019A873 /* QuestionOption.swift */; };
 		35660BCD1FD3782600FBA959 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35660BCC1FD3782600FBA959 /* RealmManager.swift */; };
 		35660BCF1FD37A6100FBA959 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35660BCE1FD37A6100FBA959 /* UserModel.swift */; };
+		35681BE41FF9B5240046572A /* TrendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35681BE31FF9B5240046572A /* TrendViewController.swift */; };
+		35681BE61FF9B53A0046572A /* TrendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35681BE51FF9B53A0046572A /* TrendView.swift */; };
+		35681BEC1FF9BBC80046572A /* Live Flow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35681BE81FF9BBC80046572A /* Live Flow.storyboard */; };
+		35681BED1FF9BBC80046572A /* Trends Flow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35681BEA1FF9BBC80046572A /* Trends Flow.storyboard */; };
 		356D0BB11FF82F1C0041EEED /* QuestionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 356D0BB01FF828F00041EEED /* QuestionView.xib */; };
 		3587B8691FD44DE2004B7B54 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3587B8681FD44DE2004B7B54 /* QuestionTableViewController.swift */; };
 		3587B86E1FD44E58004B7B54 /* Color Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3587B86C1FD44E57004B7B54 /* Color Utilities.swift */; };
@@ -72,13 +75,16 @@
 		0DBBEB6EDE1BB9899AAE5309 /* Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		16B5D68722D20E54D6283276 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		19585E54E69DF148FC9AD280 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
-		35308FAD1FE56C08001C800A /* Live Flow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Live Flow.storyboard"; sourceTree = "<group>"; };
 		35308FAF1FE57175001C800A /* AnswerQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerQuestionView.swift; sourceTree = "<group>"; };
 		35308FB21FE57710001C800A /* AnswerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerView.xib; sourceTree = "<group>"; };
 		35363EAB1FD9DF760019A873 /* QuestionOptionToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionOptionToggle.swift; sourceTree = "<group>"; };
 		35363EAD1FD9EB190019A873 /* QuestionOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionOption.swift; sourceTree = "<group>"; };
 		35660BCC1FD3782600FBA959 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		35660BCE1FD37A6100FBA959 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		35681BE31FF9B5240046572A /* TrendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendViewController.swift; sourceTree = "<group>"; };
+		35681BE51FF9B53A0046572A /* TrendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendView.swift; sourceTree = "<group>"; };
+		35681BE91FF9BBC80046572A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Live Flow.storyboard"; sourceTree = "<group>"; };
+		35681BEB1FF9BBC80046572A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Trends Flow.storyboard"; sourceTree = "<group>"; };
 		356D0BB01FF828F00041EEED /* QuestionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionView.xib; sourceTree = "<group>"; };
 		3587B8681FD44DE2004B7B54 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		3587B86C1FD44E57004B7B54 /* Color Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color Utilities.swift"; sourceTree = "<group>"; };
@@ -184,6 +190,15 @@
 			path = "Question Option Toggle";
 			sourceTree = "<group>";
 		};
+		35681BE21FF9B5080046572A /* Trend Screen */ = {
+			isa = PBXGroup;
+			children = (
+				35681BE31FF9B5240046572A /* TrendViewController.swift */,
+				35681BE51FF9B53A0046572A /* TrendView.swift */,
+			);
+			path = "Trend Screen";
+			sourceTree = "<group>";
+		};
 		35B1AA181FD35C1900362712 = {
 			isa = PBXGroup;
 			children = (
@@ -210,13 +225,14 @@
 		35B1AA231FD35C1900362712 /* Vote */ = {
 			isa = PBXGroup;
 			children = (
+				35B1AA281FD35C1900362712 /* Main.storyboard */,
+				35681BE81FF9BBC80046572A /* Live Flow.storyboard */,
+				35681BEA1FF9BBC80046572A /* Trends Flow.storyboard */,
 				35C03EEA1FD458B9000B225A /* Scenes */,
 				35C03EE61FD45877000B225A /* Views */,
 				35C03EE31FD4584A000B225A /* Model */,
 				35C03EE51FD45862000B225A /* Resources */,
 				35C03EE21FD45578000B225A /* Utilities */,
-				35B1AA281FD35C1900362712 /* Main.storyboard */,
-				35308FAD1FE56C08001C800A /* Live Flow.storyboard */,
 				35B1AA241FD35C1900362712 /* AppDelegate.swift */,
 				35B1AA331FD35C1900362712 /* Info.plist */,
 			);
@@ -293,6 +309,7 @@
 		35C03EEA1FD458B9000B225A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				35681BE21FF9B5080046572A /* Trend Screen */,
 				35E7104B1FD76160006CE315 /* Answer Question */,
 				35C03EEB1FD458BF000B225A /* Questions */,
 			);
@@ -498,8 +515,9 @@
 				35C03EED1FD4599D000B225A /* Themes.xcassets in Resources */,
 				356D0BB11FF82F1C0041EEED /* QuestionView.xib in Resources */,
 				35308FB31FE57710001C800A /* AnswerView.xib in Resources */,
-				35308FAE1FE56C08001C800A /* Live Flow.storyboard in Resources */,
 				35B1AA2F1FD35C1900362712 /* Assets.xcassets in Resources */,
+				35681BED1FF9BBC80046572A /* Trends Flow.storyboard in Resources */,
+				35681BEC1FF9BBC80046572A /* Live Flow.storyboard in Resources */,
 				35B1AA2A1FD35C1900362712 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -722,6 +740,7 @@
 				35E710501FD761D8006CE315 /* QuestionOptionsView.swift in Sources */,
 				35E7104A1FD75B2C006CE315 /* QuestionTableView.swift in Sources */,
 				35E710421FD74E8D006CE315 /* PrimarySplitViewController.swift in Sources */,
+				35681BE61FF9B53A0046572A /* TrendView.swift in Sources */,
 				35ECC5C81FD6218E009F5977 /* QuestionOptionsModel.swift in Sources */,
 				3587B86E1FD44E58004B7B54 /* Color Utilities.swift in Sources */,
 				35E7104D1FD7617F006CE315 /* AnswerQuestionViewController.swift in Sources */,
@@ -729,6 +748,7 @@
 				3587B86F1FD44E58004B7B54 /* StyleGlobals.swift in Sources */,
 				35660BCD1FD3782600FBA959 /* RealmManager.swift in Sources */,
 				3587B8691FD44DE2004B7B54 /* QuestionTableViewController.swift in Sources */,
+				35681BE41FF9B5240046572A /* TrendViewController.swift in Sources */,
 				35E710481FD75378006CE315 /* AnswerView.swift in Sources */,
 				35E710461FD751DC006CE315 /* QuestionView.swift in Sources */,
 				35363EAE1FD9EB190019A873 /* QuestionOption.swift in Sources */,
@@ -775,6 +795,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		35681BE81FF9BBC80046572A /* Live Flow.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35681BE91FF9BBC80046572A /* Base */,
+			);
+			name = "Live Flow.storyboard";
+			sourceTree = "<group>";
+		};
+		35681BEA1FF9BBC80046572A /* Trends Flow.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35681BEB1FF9BBC80046572A /* Base */,
+			);
+			name = "Trends Flow.storyboard";
+			sourceTree = "<group>";
+		};
 		35B1AA281FD35C1900362712 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

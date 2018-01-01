@@ -49,23 +49,32 @@ enum QuestionOption: Hashable {
         }
     }
     
-    var image: UIImage {
-        switch self {
-        case .closedAnswers(let value):
-            return value ? #imageLiteral(resourceName: "Icons/Closed answers") : #imageLiteral(resourceName: "Icons/Open answers")
-        case .partialResults(let value):
-            return value ? #imageLiteral(resourceName: "Icons/Partial results") : #imageLiteral(resourceName: "Icons/No partial results")
-        case .timeLimit(let value):
-            return value == nil ? #imageLiteral(resourceName: "Icons/No time limit") : #imageLiteral(resourceName: "Icons/Time Limit")
-        case .privateQuestion(let value):
-            return value ? #imageLiteral(resourceName: "Icons/Private question") : #imageLiteral(resourceName: "Icons/Public question")
-        case .lockedAnswers(let value):
-            return value ? #imageLiteral(resourceName: "Icons/Locked answers") : #imageLiteral(resourceName: "Icons/Unlocked answers")
-        case .multipleAnswers(let value):
-            return value ? #imageLiteral(resourceName: "Icons/Multiple answers") : #imageLiteral(resourceName: "Icons/Single answer")
-        case .secretAnswers(let value):
-            return value ? #imageLiteral(resourceName: "Icons/Secret answer") : #imageLiteral(resourceName: "Icons/Public answer")
+    func image(fromBundle bundle: Bundle) -> UIImage {
+        
+        func getName() -> String {
+            switch self {
+            case .closedAnswers(let value):
+                return value ? "Icons/Closed answers" : "Icons/Open answers"
+            case .partialResults(let value):
+                return value ? "Icons/Partial results" : "Icons/No partial results"
+            case .timeLimit(let value):
+                return value == nil ? "Icons/No time limit" : "Icons/Time Limit"
+            case .privateQuestion(let value):
+                return value ? "Icons/Private question" : "Icons/Public question"
+            case .lockedAnswers(let value):
+                return value ? "Icons/Locked answers" : "Icons/Unlocked answers"
+            case .multipleAnswers(let value):
+                return value ? "Icons/Multiple answers" : "Icons/Single answer"
+            case .secretAnswers(let value):
+                return value ? "Icons/Secret answer" : "Icons/Public answer"
+            }
         }
+        let name = getName()
+        
+        return UIImage(
+            named: name,
+            in: bundle,
+            compatibleWith: nil)!
     }
     
     var id: Int {

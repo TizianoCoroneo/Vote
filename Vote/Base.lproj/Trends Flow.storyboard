@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pqj-rx-D7h">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Question Table View Controller-->
+        <scene sceneID="fsn-Wk-oZD">
+            <objects>
+                <tableViewController id="eVD-LK-bdf" customClass="QuestionTableViewController" customModule="Vote" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="220" sectionHeaderHeight="28" sectionFooterHeight="28" id="4tf-eW-iwm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="scrollIndicatorInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="QuestionTableViewCell" rowHeight="220" id="zsy-d0-TEc" customClass="QuestionTableViewCell" customModule="Vote" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="220"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zsy-d0-TEc" id="BUq-gT-rgh">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uEh-Ve-Wy7">
+                                            <rect key="frame" x="8" y="16" width="359" height="204"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GeZ-b0-H6O" userLabel="Info view">
+                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19:49" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGS-R0-EN7">
+                                                            <rect key="frame" x="0.0" y="0.0" width="177" height="20"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <color key="textColor" name="VoteTextGrey"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45 votes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhG-nH-LpP">
+                                                            <rect key="frame" x="182" y="0.0" width="177" height="20"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <color key="textColor" name="VoteTextGrey"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="XY8-L7-Ykm" userLabel="Question View" customClass="QuestionView" customModule="Vote" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="30" width="359" height="64"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" verticalCompressionResistancePriority="760" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="Kb1-aO-2EK" userLabel="Answer View" customClass="AnswerView" customModule="Vote" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="104" width="359" height="100"/>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="uEh-Ve-Wy7" secondAttribute="trailing" constant="8" id="5ev-CO-kGH"/>
+                                        <constraint firstAttribute="bottom" secondItem="uEh-Ve-Wy7" secondAttribute="bottom" id="OOX-fa-P4z"/>
+                                        <constraint firstItem="uEh-Ve-Wy7" firstAttribute="leading" secondItem="BUq-gT-rgh" secondAttribute="leading" constant="8" id="ReP-Uh-yVy"/>
+                                        <constraint firstItem="uEh-Ve-Wy7" firstAttribute="top" secondItem="BUq-gT-rgh" secondAttribute="top" constant="16" id="tOM-5I-Dcd"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="answer" destination="Kb1-aO-2EK" id="OLh-65-VXa"/>
+                                    <outlet property="hourLabel" destination="nGS-R0-EN7" id="S9T-dz-iCo"/>
+                                    <outlet property="question" destination="XY8-L7-Ykm" id="5g2-bx-I3Q"/>
+                                    <outlet property="votesLabel" destination="bhG-nH-LpP" id="Tov-St-irH"/>
+                                    <segue destination="Wa0-JN-ya7" kind="showDetail" identifier="ShowAnswerQuestionView" id="NdT-WZ-HII">
+                                        <nil key="action"/>
+                                    </segue>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="9T3-QD-d1p"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sMl-EQ-GKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2509.5999999999999" y="-287.40629685157421"/>
+        </scene>
+        <!--Trend View Controller-->
+        <scene sceneID="zWD-Vf-TMO">
+            <objects>
+                <viewController id="Wa0-JN-ya7" customClass="TrendViewController" customModule="Vote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oMT-Nx-xbp" customClass="TrendView" customModule="Vote" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="qcY-5u-aWu"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="CY3-a5-fVa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NEb-2y-ilL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2509.5999999999999" y="720.08995502248877"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LzP-AH-qdH">
+            <objects>
+                <navigationController id="dmM-s9-Lw4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3zw-Rb-Rg9">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eVD-LK-bdf" kind="relationship" relationship="rootViewController" id="sZV-RV-tqT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S6R-T3-gRe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1673" y="-287"/>
+        </scene>
+        <!--Trends-->
+        <scene sceneID="rlt-Vt-1ye">
+            <objects>
+                <splitViewController id="pqj-rx-D7h" customClass="PrimarySplitViewController" customModule="Vote" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Trends" image="TabBarIcon/Trends/Active" landscapeImage="TabBarIcon/Trends/Active" largeContentSizeImage="TabBarIcon/Trends/Active" id="DlF-6A-ICp"/>
+                    <connections>
+                        <segue destination="dmM-s9-Lw4" kind="relationship" relationship="masterViewController" id="6Qj-pY-y4H"/>
+                        <segue destination="Wa0-JN-ya7" kind="relationship" relationship="detailViewController" id="2ao-zx-Kvx"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FWJ-2f-0gR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="814" y="-40"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TabBarIcon/Trends/Active" width="48" height="34"/>
+        <namedColor name="VoteTextGrey">
+            <color red="0.77300000189999996" green="0.77300000189999996" blue="0.77300000189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="2ao-zx-Kvx"/>
+    </inferredMetricsTieBreakers>
+</document>

@@ -20,18 +20,16 @@ class QuestionOptionToggle: UIButton {
     }
     
     private func updateImage(forOption option: QuestionOption) {
+        let bundle = Bundle.init(for: type(of: self))
         setImage(
-            option.image
+            option.image(fromBundle: bundle)
                 .withRenderingMode(.alwaysOriginal),
             for: .normal)
         self.accessibilityLabel = option.name
     }
     
     private func setup() {
-        setImage(
-            toggleOption.image
-                .withRenderingMode(.alwaysOriginal),
-            for: .normal)
+        updateImage(forOption: toggleOption)
         if self.allTargets.count == 0 {
             addTarget(
                 self,
@@ -40,11 +38,16 @@ class QuestionOptionToggle: UIButton {
         }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setup()
     }
 
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
     @objc func optionPressed() {
         toggleOption = toggleInputClosure(toggleOption)
     }

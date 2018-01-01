@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6yw-bz-241">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Question Table View Controller-->
+        <scene sceneID="80N-Z8-N8F">
+            <objects>
+                <tableViewController id="8VL-5e-sMB" customClass="QuestionTableViewController" customModule="Vote" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="220" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jl8-k9-nXH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="scrollIndicatorInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="QuestionTableViewCell" rowHeight="220" id="vzO-fO-d6q" customClass="QuestionTableViewCell" customModule="Vote" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="220"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vzO-fO-d6q" id="BLf-lg-GdG">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ifG-QC-mCP">
+                                            <rect key="frame" x="8" y="16" width="359" height="204"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="T8w-Al-zr3" userLabel="Info view">
+                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19:49" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cu1-yz-RC2">
+                                                            <rect key="frame" x="0.0" y="0.0" width="177" height="20"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <color key="textColor" name="VoteTextGrey"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45 votes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bnw-PS-qrm">
+                                                            <rect key="frame" x="182" y="0.0" width="177" height="20"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <color key="textColor" name="VoteTextGrey"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="O3N-Pe-TtX" userLabel="Question View" customClass="QuestionView" customModule="Vote" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="30" width="359" height="64"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" verticalCompressionResistancePriority="760" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="InL-Rb-Zk8" userLabel="Answer View" customClass="AnswerView" customModule="Vote" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="104" width="359" height="100"/>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ifG-QC-mCP" firstAttribute="leading" secondItem="BLf-lg-GdG" secondAttribute="leading" constant="8" id="0bX-O8-8UG"/>
+                                        <constraint firstAttribute="bottom" secondItem="ifG-QC-mCP" secondAttribute="bottom" id="A6L-Wt-qKV"/>
+                                        <constraint firstAttribute="trailing" secondItem="ifG-QC-mCP" secondAttribute="trailing" constant="8" id="HDS-dt-iIv"/>
+                                        <constraint firstItem="ifG-QC-mCP" firstAttribute="top" secondItem="BLf-lg-GdG" secondAttribute="top" constant="16" id="RC7-nC-her"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="answer" destination="InL-Rb-Zk8" id="sHL-cb-56i"/>
+                                    <outlet property="hourLabel" destination="Cu1-yz-RC2" id="qle-HT-CrR"/>
+                                    <outlet property="question" destination="O3N-Pe-TtX" id="Ebm-Ca-EGN"/>
+                                    <outlet property="votesLabel" destination="Bnw-PS-qrm" id="QGu-Cx-d4t"/>
+                                    <segue destination="fV2-fs-lDT" kind="showDetail" identifier="ShowAnswerQuestionView" id="uaa-gD-KRL"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="2D2-Li-m1E"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y63-8X-Vjf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2509.5999999999999" y="-287.40629685157421"/>
+        </scene>
+        <!--Answer Question View Controller-->
+        <scene sceneID="OeF-Gk-hY8">
+            <objects>
+                <viewController id="fV2-fs-lDT" customClass="AnswerQuestionViewController" customModule="Vote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Oc-Gs-r55" customClass="AnswerQuestionView" customModule="Vote" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xK-ic-RPH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RFf-v3-lgU">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="394"/>
+                                        <subviews>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="64" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKf-ad-se6" userLabel="Options View">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="404" placeholderIntrinsicHeight="48" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="OSL-N1-Q7U" userLabel="Options Stack View" customClass="QuestionOptionsView" customModule="Vote" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="8" width="404" height="48"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijt-w6-gf8" customClass="QuestionOptionToggle" customModule="Vote" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="44" height="48"/>
+                                                                <state key="normal" image="Icons/Closed answers"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tm4-x1-KvP" customClass="QuestionOptionToggle" customModule="Vote" customModuleProvider="target">
+                                                                <rect key="frame" x="60" y="0.0" width="44" height="48"/>
+                                                                <state key="normal" image="Icons/Closed answers"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgR-GK-2z2" customClass="QuestionOptionToggle" customModule="Vote" customModuleProvider="target">
+                                                                <rect key="frame" x="120" y="0.0" width="44" height="48"/>
+                                                                <state key="normal" image="Icons/Closed answers"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOA-1H-ax1" customClass="QuestionOptionToggle" customModule="Vote" customModuleProvider="target">
+                                                                <rect key="frame" x="180" y="0.0" width="44" height="48"/>
+                                                                <state key="normal" image="Icons/Closed answers"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04b-tR-iVD" customClass="QuestionOptionToggle" customModule="Vote" customModuleProvider="target">
+                                                                <rect key="frame" x="240" y="0.0" width="44" height="48"/>
+                                                                <state key="normal" image="Icons/Closed answers"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rN0-cL-rqQ" customClass="QuestionOptionToggle" customModule="Vote" customModuleProvider="target">
+                                                                <rect key="frame" x="300" y="0.0" width="44" height="48"/>
+                                                                <state key="normal" image="Icons/Closed answers"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIj-mU-Fxq" customClass="QuestionOptionToggle" customModule="Vote" customModuleProvider="target">
+                                                                <rect key="frame" x="360" y="0.0" width="44" height="48"/>
+                                                                <state key="normal" image="Icons/Closed answers"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <connections>
+                                                            <outletCollection property="optionsViews" destination="Ijt-w6-gf8" collectionClass="NSMutableArray" id="bq7-1l-8lm"/>
+                                                            <outletCollection property="optionsViews" destination="Tm4-x1-KvP" collectionClass="NSMutableArray" id="UcE-TA-e1G"/>
+                                                            <outletCollection property="optionsViews" destination="BgR-GK-2z2" collectionClass="NSMutableArray" id="stA-Bm-7h1"/>
+                                                            <outletCollection property="optionsViews" destination="LOA-1H-ax1" collectionClass="NSMutableArray" id="fJE-Dj-QMp"/>
+                                                            <outletCollection property="optionsViews" destination="04b-tR-iVD" collectionClass="NSMutableArray" id="QPP-cJ-t7k"/>
+                                                            <outletCollection property="optionsViews" destination="rN0-cL-rqQ" collectionClass="NSMutableArray" id="77N-jw-qAG"/>
+                                                            <outletCollection property="optionsViews" destination="RIj-mU-Fxq" collectionClass="NSMutableArray" id="Qw8-pP-9Ns"/>
+                                                        </connections>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="OSL-N1-Q7U" firstAttribute="leading" secondItem="MKf-ad-se6" secondAttribute="leading" constant="8" id="GsI-Kt-119"/>
+                                                    <constraint firstAttribute="trailing" secondItem="OSL-N1-Q7U" secondAttribute="trailing" constant="8" id="HXP-J9-Q2O"/>
+                                                    <constraint firstAttribute="bottom" secondItem="OSL-N1-Q7U" secondAttribute="bottom" constant="8" id="oer-m7-xVo"/>
+                                                    <constraint firstItem="OSL-N1-Q7U" firstAttribute="top" secondItem="MKf-ad-se6" secondAttribute="top" constant="8" id="vNc-ao-ebz"/>
+                                                    <constraint firstItem="OSL-N1-Q7U" firstAttribute="height" secondItem="MKf-ad-se6" secondAttribute="height" constant="-16" id="vXA-1v-dnP"/>
+                                                </constraints>
+                                            </scrollView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="740" placeholderIntrinsicWidth="355" placeholderIntrinsicHeight="320" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YX1-7Y-onq">
+                                                <rect key="frame" x="10" y="74" width="375" height="320"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" verticalHuggingPriority="260" verticalCompressionResistancePriority="620" translatesAutoresizingMaskIntoConstraints="NO" id="090-YF-AxY" userLabel="Question View" customClass="QuestionView" customModule="Vote" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" verticalHuggingPriority="260" verticalCompressionResistancePriority="600" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="oec-yF-zfm" userLabel="Answer View" customClass="AnswerView" customModule="Vote" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="110" width="375" height="100"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" verticalHuggingPriority="260" verticalCompressionResistancePriority="610" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="FLx-1v-9wF" userLabel="Answer View" customClass="AnswerView" customModule="Vote" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="220" width="375" height="100"/>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="RFf-v3-lgU" firstAttribute="top" secondItem="2xK-ic-RPH" secondAttribute="top" id="2AL-C9-aHK"/>
+                                    <constraint firstAttribute="bottom" secondItem="RFf-v3-lgU" secondAttribute="bottom" id="PFy-Vz-anG"/>
+                                    <constraint firstItem="RFf-v3-lgU" firstAttribute="leading" secondItem="2xK-ic-RPH" secondAttribute="leading" id="PcM-Nz-PMW"/>
+                                    <constraint firstAttribute="trailing" secondItem="RFf-v3-lgU" secondAttribute="trailing" id="V7M-vr-zq2"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YX1-7Y-onq" firstAttribute="width" secondItem="9Oc-Gs-r55" secondAttribute="width" constant="-20" id="0FU-WI-wda"/>
+                            <constraint firstAttribute="trailing" secondItem="2xK-ic-RPH" secondAttribute="trailing" id="G24-6u-jZE"/>
+                            <constraint firstItem="2xK-ic-RPH" firstAttribute="top" secondItem="9Oc-Gs-r55" secondAttribute="top" id="KhI-2a-wCI"/>
+                            <constraint firstItem="MKf-ad-se6" firstAttribute="width" secondItem="9Oc-Gs-r55" secondAttribute="width" id="TWI-Tj-I1X"/>
+                            <constraint firstAttribute="bottom" secondItem="2xK-ic-RPH" secondAttribute="bottom" id="Zgk-ss-DkV"/>
+                            <constraint firstItem="2xK-ic-RPH" firstAttribute="leading" secondItem="9Oc-Gs-r55" secondAttribute="leading" id="dUc-TB-bvX"/>
+                            <constraint firstItem="RFf-v3-lgU" firstAttribute="width" secondItem="9Oc-Gs-r55" secondAttribute="width" id="fD6-db-Du8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="urO-cl-8GS"/>
+                        <connections>
+                            <outlet property="answersContainer" destination="YX1-7Y-onq" id="A3L-aF-vn5"/>
+                            <outlet property="optionsView" destination="OSL-N1-Q7U" id="RhZ-IO-tNL"/>
+                            <outlet property="questionView" destination="090-YF-AxY" id="qwc-0h-Jao"/>
+                        </connections>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="LaL-NU-aLb"/>
+                    <connections>
+                        <outlet property="answerView" destination="9Oc-Gs-r55" id="JRw-S3-KAI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bIC-MO-uPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2509.5999999999999" y="720.08995502248877"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8ye-ev-iWX">
+            <objects>
+                <navigationController id="PNf-bt-hx1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zDv-nK-G7A">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8VL-5e-sMB" kind="relationship" relationship="rootViewController" id="b3m-yp-rlO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fkf-VN-dTW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1673" y="-287"/>
+        </scene>
+        <!--Live-->
+        <scene sceneID="xrh-a7-ft7">
+            <objects>
+                <splitViewController id="6yw-bz-241" customClass="PrimarySplitViewController" customModule="Vote" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Live" image="TabBarIcon/Live/Active" landscapeImage="TabBarIcon/Live/Active" largeContentSizeImage="TabBarIcon/Live/Active" id="iqb-Ai-qOL"/>
+                    <connections>
+                        <segue destination="PNf-bt-hx1" kind="relationship" relationship="masterViewController" id="BkF-CI-CDd"/>
+                        <segue destination="fV2-fs-lDT" kind="relationship" relationship="detailViewController" id="n1j-pL-RTa"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hCE-M5-1fe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="814" y="-40"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icons/Closed answers" width="44" height="44"/>
+        <image name="TabBarIcon/Live/Active" width="48" height="34"/>
+        <namedColor name="VoteTextGrey">
+            <color red="0.77300000189999996" green="0.77300000189999996" blue="0.77300000189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="n1j-pL-RTa"/>
+    </inferredMetricsTieBreakers>
+</document>
