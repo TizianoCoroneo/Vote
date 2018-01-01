@@ -20,6 +20,10 @@
 		35681BE61FF9B53A0046572A /* TrendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35681BE51FF9B53A0046572A /* TrendView.swift */; };
 		35681BEC1FF9BBC80046572A /* Live Flow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35681BE81FF9BBC80046572A /* Live Flow.storyboard */; };
 		35681BED1FF9BBC80046572A /* Trends Flow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35681BEA1FF9BBC80046572A /* Trends Flow.storyboard */; };
+		35681BF01FF9DD740046572A /* NewQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35681BEF1FF9DD740046572A /* NewQuestionViewController.swift */; };
+		35681BF21FF9DD890046572A /* NewQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35681BF11FF9DD890046572A /* NewQuestionView.swift */; };
+		35681BF51FF9EDEA0046572A /* QuestionOptionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35681BF41FF9EDEA0046572A /* QuestionOptionRowView.swift */; };
+		35681BF71FF9EDFF0046572A /* QuestionOptionRowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35681BF61FF9EDFF0046572A /* QuestionOptionRowView.xib */; };
 		356D0BB11FF82F1C0041EEED /* QuestionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 356D0BB01FF828F00041EEED /* QuestionView.xib */; };
 		3587B8691FD44DE2004B7B54 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3587B8681FD44DE2004B7B54 /* QuestionTableViewController.swift */; };
 		3587B86E1FD44E58004B7B54 /* Color Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3587B86C1FD44E57004B7B54 /* Color Utilities.swift */; };
@@ -85,6 +89,10 @@
 		35681BE51FF9B53A0046572A /* TrendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendView.swift; sourceTree = "<group>"; };
 		35681BE91FF9BBC80046572A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Live Flow.storyboard"; sourceTree = "<group>"; };
 		35681BEB1FF9BBC80046572A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Trends Flow.storyboard"; sourceTree = "<group>"; };
+		35681BEF1FF9DD740046572A /* NewQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuestionViewController.swift; sourceTree = "<group>"; };
+		35681BF11FF9DD890046572A /* NewQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuestionView.swift; sourceTree = "<group>"; };
+		35681BF41FF9EDEA0046572A /* QuestionOptionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionOptionRowView.swift; sourceTree = "<group>"; };
+		35681BF61FF9EDFF0046572A /* QuestionOptionRowView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionOptionRowView.xib; sourceTree = "<group>"; };
 		356D0BB01FF828F00041EEED /* QuestionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionView.xib; sourceTree = "<group>"; };
 		3587B8681FD44DE2004B7B54 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		3587B86C1FD44E57004B7B54 /* Color Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color Utilities.swift"; sourceTree = "<group>"; };
@@ -199,6 +207,24 @@
 			path = "Trend Screen";
 			sourceTree = "<group>";
 		};
+		35681BEE1FF9DD5B0046572A /* New Question */ = {
+			isa = PBXGroup;
+			children = (
+				35681BEF1FF9DD740046572A /* NewQuestionViewController.swift */,
+				35681BF11FF9DD890046572A /* NewQuestionView.swift */,
+			);
+			path = "New Question";
+			sourceTree = "<group>";
+		};
+		35681BF31FF9EDCC0046572A /* Question Option Row */ = {
+			isa = PBXGroup;
+			children = (
+				35681BF41FF9EDEA0046572A /* QuestionOptionRowView.swift */,
+				35681BF61FF9EDFF0046572A /* QuestionOptionRowView.xib */,
+			);
+			path = "Question Option Row";
+			sourceTree = "<group>";
+		};
 		35B1AA181FD35C1900362712 = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				35308FB11FE576EE001C800A /* Question and answer */,
+				35681BF31FF9EDCC0046572A /* Question Option Row */,
 				35363EB11FD9FD5B0019A873 /* Question Option Toggle */,
 				35E7104E1FD761BB006CE315 /* Toolbar */,
 				35E710441FD751BB006CE315 /* Navigation */,
@@ -309,6 +336,7 @@
 		35C03EEA1FD458B9000B225A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				35681BEE1FF9DD5B0046572A /* New Question */,
 				35681BE21FF9B5080046572A /* Trend Screen */,
 				35E7104B1FD76160006CE315 /* Answer Question */,
 				35C03EEB1FD458BF000B225A /* Questions */,
@@ -519,6 +547,7 @@
 				35681BED1FF9BBC80046572A /* Trends Flow.storyboard in Resources */,
 				35681BEC1FF9BBC80046572A /* Live Flow.storyboard in Resources */,
 				35B1AA2A1FD35C1900362712 /* Main.storyboard in Resources */,
+				35681BF71FF9EDFF0046572A /* QuestionOptionRowView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -756,8 +785,11 @@
 				35C03EF31FD493C7000B225A /* QuestionTableViewCell.swift in Sources */,
 				35363EAC1FD9DF760019A873 /* QuestionOptionToggle.swift in Sources */,
 				35C03EEF1FD45E78000B225A /* VoteNavigationBar.swift in Sources */,
+				35681BF01FF9DD740046572A /* NewQuestionViewController.swift in Sources */,
+				35681BF51FF9EDEA0046572A /* QuestionOptionRowView.swift in Sources */,
 				35D4FDB11FF8A8D4003E3EFD /* ToggleStateAnimatable.swift in Sources */,
 				35B1AA251FD35C1900362712 /* AppDelegate.swift in Sources */,
+				35681BF21FF9DD890046572A /* NewQuestionView.swift in Sources */,
 				35660BCF1FD37A6100FBA959 /* UserModel.swift in Sources */,
 				35ECC5C61FD61AB7009F5977 /* QuestionModel.swift in Sources */,
 			);

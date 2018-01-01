@@ -12,13 +12,13 @@ import UIKit
 class QuestionView: UIView, ToggleStateAnimatable {
 
     /// Big Q label.
-    @IBOutlet weak var qLabel: UILabel!
+    @IBOutlet weak var qLabel: UILabel?
     
     /// Main question text label.
-    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var questionLabel: UILabel?
     
     /// The view instantiated from the NIB.
-    weak var view: UIView! = nil
+    weak var view: UIView? = nil
     
     var xibFileName: String {
         return "QuestionView"
@@ -33,7 +33,7 @@ class QuestionView: UIView, ToggleStateAnimatable {
     }
     
     var slideDistance: CGFloat {
-        return qLabel.frame.width
+        return qLabel?.frame.width ?? 60
     }
     
     enum Direction {
@@ -64,12 +64,12 @@ class QuestionView: UIView, ToggleStateAnimatable {
         
         guard view != nil else { return }
         
-        view.layer.cornerRadius = style.cornerRadius
-        view.layer.borderColor = style.borderColor.cgColor
-        view.layer.borderWidth = style.borderWidth
+        view?.layer.cornerRadius = style.cornerRadius
+        view?.layer.borderColor = style.borderColor.cgColor
+        view?.layer.borderWidth = style.borderWidth
         
-        qLabel.textColor = style.symbolColor
-        questionLabel.textColor = style.textColor
+        qLabel?.textColor = style.symbolColor
+        questionLabel?.textColor = style.textColor
     }
     
     convenience init() {
@@ -83,14 +83,6 @@ class QuestionView: UIView, ToggleStateAnimatable {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        loadView()
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        state == .on
-            ? targetAnimatedProperties()
-            : initialAnimatedProperties()
     }
     
     private func loadView() {
@@ -110,11 +102,14 @@ class QuestionView: UIView, ToggleStateAnimatable {
             nibName: name,
             bundle: bundle)
         guard
+            view == nil,
             let newView = nib.instantiate(
                 withOwner: s,
                 options: nil).first as? UIView
             else { return }
         view = newView
+        
+        guard let view = view else { return }
         
         view.translatesAutoresizingMaskIntoConstraints = false
         
@@ -157,8 +152,6 @@ class QuestionView: UIView, ToggleStateAnimatable {
             [weak view, viewFrameInitialPosition] in
             
             view?.frame.origin.x = viewFrameInitialPosition
-            
-            view?.layoutIfNeeded()
         }
     }
     
@@ -166,9 +159,23 @@ class QuestionView: UIView, ToggleStateAnimatable {
         return {
             [weak view, viewFrameTargetPosition] in
             view?.frame.origin.x = viewFrameTargetPosition
-            
-            view?.layoutIfNeeded()
         }
+    }
+    
+    func setSelected(_ selected: Bool) {
+        let sel: ToggleState = selected ? .on : .off
+        
+        guard
+            state != sel
+            else { return }
+        
+        state = sel
+        
+        state == .on
+            ? targetAnimatedProperties()
+            : initialAnimatedProperties()
+        setNeedsLayout()
+        layoutIfNeeded()
     }
     
     private let viewFrameInitialPosition: CGFloat = 0

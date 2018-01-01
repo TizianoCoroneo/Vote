@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionOptionRowView" customModule="Vote" customModuleProvider="target">
+            <connections>
+                <outlet property="optionImageView" destination="Qdl-vS-Tj0" id="3bc-q6-adA"/>
+                <outlet property="optionNameLabel" destination="3V1-ux-l4w" id="QCQ-lh-6e7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FgW-24-TCc">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4u2-h1-f06">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="58"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icons/Closed answers" translatesAutoresizingMaskIntoConstraints="NO" id="Qdl-vS-Tj0">
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="58"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Qdl-vS-Tj0" secondAttribute="trailing" id="X60-RB-blv"/>
+                                <constraint firstAttribute="width" constant="60" id="chV-AS-eod"/>
+                                <constraint firstItem="Qdl-vS-Tj0" firstAttribute="leading" secondItem="4u2-h1-f06" secondAttribute="leading" id="lKu-xD-yMo"/>
+                                <constraint firstAttribute="bottom" secondItem="Qdl-vS-Tj0" secondAttribute="bottom" id="pAL-Yn-HkK"/>
+                                <constraint firstItem="Qdl-vS-Tj0" firstAttribute="top" secondItem="4u2-h1-f06" secondAttribute="top" id="uNE-Jh-wvT"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y67-TV-Ide">
+                            <rect key="frame" x="70" y="0.0" width="305" height="58"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Option Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3V1-ux-l4w">
+                                    <rect key="frame" x="10" y="0.0" width="285" height="58"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                    <color key="textColor" name="VoteDarkGrey"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" name="VoteLightGrey"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="3V1-ux-l4w" secondAttribute="trailing" constant="10" id="Ugc-cE-VuS"/>
+                                <constraint firstAttribute="bottom" secondItem="3V1-ux-l4w" secondAttribute="bottom" id="kIe-Wf-ooy"/>
+                                <constraint firstItem="3V1-ux-l4w" firstAttribute="leading" secondItem="Y67-TV-Ide" secondAttribute="leading" constant="10" id="m8Z-yF-05F"/>
+                                <constraint firstItem="3V1-ux-l4w" firstAttribute="top" secondItem="Y67-TV-Ide" secondAttribute="top" id="wg9-e7-H5O"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="FgW-24-TCc" secondAttribute="bottom" id="09i-7o-iU4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="FgW-24-TCc" secondAttribute="trailing" id="Nec-7R-UJu"/>
+                <constraint firstItem="FgW-24-TCc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Oc6-3L-1uu"/>
+                <constraint firstItem="FgW-24-TCc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wpf-iS-4fL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="90.5" y="-263"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Icons/Closed answers" width="44" height="44"/>
+        <namedColor name="VoteDarkGrey">
+            <color red="0.29019607843137257" green="0.29019607843137257" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="VoteLightGrey">
+            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

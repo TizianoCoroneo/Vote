@@ -17,7 +17,7 @@ class RealmManager {
 
     fileprivate(set) var defaultRealm: Realm?
 
-    private let localRealmURL = URL(string: "realm://0.0.0.0:9080/~/voteTest")!
+    private let localRealmURL = URL(string: "realm://192.168.178.165:9080/~/voteTest")!
     
     fileprivate var config = Realm.Configuration()
 

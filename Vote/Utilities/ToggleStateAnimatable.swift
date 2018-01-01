@@ -18,7 +18,7 @@ prefix func !(_ state: ToggleState) -> ToggleState {
 }
 
 protocol ToggleStateAnimatable: class {
-    var view: UIView! { get set }
+    
     var duration: TimeInterval { get }
     var state: ToggleState { get set }
     var runningAnimators: [UIViewPropertyAnimator] { get set }
@@ -131,8 +131,6 @@ extension ToggleStateAnimatable {
         case .off:
             initialAnimatedProperties()
         }
-        
-        view?.layoutIfNeeded()
     }
     
     // MARK: - Running Animation Helpers

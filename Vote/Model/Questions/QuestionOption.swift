@@ -127,6 +127,26 @@ enum QuestionOption: Hashable {
         }
     }
     
+    init?(fromName name: String) {
+        switch name.uppercased() {
+        case "Closed answers".uppercased(): self = .closedAnswers(true)
+        case "Open answers".uppercased(): self = .closedAnswers(false)
+        case "Partial results".uppercased(): self = .partialResults(true)
+        case "No partial results".uppercased(): self = .partialResults(false)
+        case "No time limit".uppercased(): self = .timeLimit(nil)
+        case "Time limit".uppercased(): self = .timeLimit(1000)
+        case "Private question".uppercased(): self = .privateQuestion(true)
+        case "Public question".uppercased(): self = .privateQuestion(false)
+        case "Locked answers".uppercased(): self = .lockedAnswers(true)
+        case "Unlocked answers".uppercased(): self = .lockedAnswers(false)
+        case "Multiple answers".uppercased(): self = .multipleAnswers(true)
+        case "Single answer".uppercased(): self = .multipleAnswers(false)
+        case "Secret answers".uppercased(): self = .secretAnswers(true)
+        case "Public answers".uppercased(): self = .secretAnswers(false)
+        default: return nil
+        }
+    }
+    
     var name: String {
         switch self {
         case .closedAnswers(let value):

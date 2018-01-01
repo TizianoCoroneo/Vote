@@ -41,7 +41,8 @@ class AnswerView: QuestionView {
     }
     
     private func addMarkIfNeeded() {
-        if self
+        if self.selectedMarkView != nil,
+            self
             .subviews
             .filter ({ $0 == selectedMarkView })
             .count == 0 {
@@ -53,7 +54,6 @@ class AnswerView: QuestionView {
     }
     
     override var initialAnimatedProperties: (() -> ()) {
-        defer { layoutIfNeeded() }
         return {
             [weak selectedMarkView,
             markInitialPosition,
@@ -98,21 +98,6 @@ class AnswerView: QuestionView {
     override func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
         addMarkIfNeeded()
-    }
-    
-    func setSelected(_ selected: Bool) {
-        let sel: ToggleState = selected ? .on : .off
-
-        guard
-            state != sel
-            else { return }
-        
-        state = sel
-        
-        selected
-            ? targetAnimatedProperties()
-            : initialAnimatedProperties()
-        layoutIfNeeded()
     }
 }
 

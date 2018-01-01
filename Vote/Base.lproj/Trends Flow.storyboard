@@ -29,19 +29,19 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uEh-Ve-Wy7">
-                                            <rect key="frame" x="8" y="16" width="359" height="204"/>
+                                            <rect key="frame" x="10" y="15" width="355" height="205"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GeZ-b0-H6O" userLabel="Info view">
-                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="355" height="21"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19:49" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGS-R0-EN7">
-                                                            <rect key="frame" x="0.0" y="0.0" width="177" height="20"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="175" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <color key="textColor" name="VoteTextGrey"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45 votes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhG-nH-LpP">
-                                                            <rect key="frame" x="182" y="0.0" width="177" height="20"/>
+                                                            <rect key="frame" x="180" y="0.0" width="175" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <color key="textColor" name="VoteTextGrey"/>
                                                             <nil key="highlightedColor"/>
@@ -49,19 +49,19 @@
                                                     </subviews>
                                                 </stackView>
                                                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="XY8-L7-Ykm" userLabel="Question View" customClass="QuestionView" customModule="Vote" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="30" width="359" height="64"/>
+                                                    <rect key="frame" x="0.0" y="31" width="355" height="64"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" verticalCompressionResistancePriority="760" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="Kb1-aO-2EK" userLabel="Answer View" customClass="AnswerView" customModule="Vote" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="104" width="359" height="100"/>
+                                                    <rect key="frame" x="0.0" y="105" width="355" height="100"/>
                                                 </view>
                                             </subviews>
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="uEh-Ve-Wy7" secondAttribute="trailing" constant="8" id="5ev-CO-kGH"/>
+                                        <constraint firstAttribute="trailing" secondItem="uEh-Ve-Wy7" secondAttribute="trailing" constant="10" id="5ev-CO-kGH"/>
                                         <constraint firstAttribute="bottom" secondItem="uEh-Ve-Wy7" secondAttribute="bottom" id="OOX-fa-P4z"/>
-                                        <constraint firstItem="uEh-Ve-Wy7" firstAttribute="leading" secondItem="BUq-gT-rgh" secondAttribute="leading" constant="8" id="ReP-Uh-yVy"/>
-                                        <constraint firstItem="uEh-Ve-Wy7" firstAttribute="top" secondItem="BUq-gT-rgh" secondAttribute="top" constant="16" id="tOM-5I-Dcd"/>
+                                        <constraint firstItem="uEh-Ve-Wy7" firstAttribute="leading" secondItem="BUq-gT-rgh" secondAttribute="leading" constant="10" id="ReP-Uh-yVy"/>
+                                        <constraint firstItem="uEh-Ve-Wy7" firstAttribute="top" secondItem="BUq-gT-rgh" secondAttribute="top" constant="15" id="tOM-5I-Dcd"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -137,6 +137,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2ao-zx-Kvx"/>
+        <segue reference="NdT-WZ-HII"/>
     </inferredMetricsTieBreakers>
 </document>
